@@ -1,4 +1,4 @@
-import Splide from '@splidejs/splide';
+// import Splide from '@splidejs/splide';
 
 var slideIndex = 1;
 showSlides(slideIndex);
@@ -29,7 +29,4 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-
-
-// new Splide( '.splide' ).mount();
 

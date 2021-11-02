@@ -1,3 +1,180 @@
-@import './_root';
-@import './_variable';
-@import './_slideshow';
+@import './root.scss';
+@import './variable.scss';
+@import './slideshow.scss';
+
+h2 {
+    font-size: $headerTwo;
+    font-family: $headerFont;
+    color : $darkBrown;
+}
+
+p {
+    font-size: $paragraphs;
+    font-family: $paragraphsFont;
+}
+
+.topNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    img {
+        width : 90px;
+        height : 50px;
+    }
+
+    ul {
+        display: none;
+    }
+
+    form {
+        display: none;
+    }
+
+    .rightNav {
+        display: flex;
+        gap : 1em;
+
+        div {
+            display: flex;
+            align-items: center;
+            gap : .4em;
+
+            &:hover {
+                color : $red;
+            }
+        }
+
+        span {
+            font-size: $paragraphs;
+            font-family: $paragraphsFont;
+            color : $darkBrown;
+            font-weight: 900;
+            cursor: pointer;
+        }
+
+    }
+
+    
+    .hamburger {
+        font-size: 2em;
+        margin-right: .8em;
+        cursor: pointer;
+    }
+}
+
+aside {
+    display: none;
+}
+
+.bottomNav {
+    display: none;
+}
+
+.gameNav {
+    display: none;
+}
+.hardwareNav {
+    display: none;
+}
+
+
+
+// main section
+.heroContainer {
+    width : 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+.heroData {
+    padding : 20px;
+
+    .console {
+        border-bottom: 2px solid $red;
+        margin-bottom: 1.5em;
+        padding-bottom: 1em;
+        width: 40%;
+    }
+
+    p {
+        margin-bottom: .7em;
+    }
+
+    h1 {
+        font-family: $headerFont;
+        color : $darkBrown;
+        font-size: $headerTwo;
+        margin-bottom: .7em;
+    }
+
+    h2 {
+        margin-bottom: .7em;
+    }
+
+    button {
+        width : 100%;
+        padding : 15px;
+        background-color: $red;
+        cursor: pointer;
+        color : $white;
+        border: none;
+        font-family: $headerFont;
+        font-size: 1.3em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 10px;
+        margin-bottom: .7em;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        gap : .5em;
+        margin-bottom: .7em;
+        
+        img {
+            width : 30px;
+            height : 30px;
+        }
+        p {
+            margin-bottom: 0;
+        }
+
+        ion-icon {
+            font-size: 1.7em;
+        }
+
+        ion-icon, a {
+            color : $red;
+            cursor: pointer;
+        }
+
+        a {
+            font-weight: 900;
+        }
+    }
+}
+
+.hero__images {
+    width : 100%;
+    background-color: $lightBlue;
+
+    img {
+        width : 200px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        &:first-child {
+            grid-row-start: 1;
+            grid-row-end: -1;
+        }
+    }
+}
