@@ -1,0 +1,15 @@
+.primary {
+    width : 100%;
+    padding : 15px;
+    background-color: $red;
+    cursor: pointer;
+    color : $white;
+    border: none;
+    font-family: $headerFont;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    margin-bottom: .7em;
+}
