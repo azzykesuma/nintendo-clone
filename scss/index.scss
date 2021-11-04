@@ -221,13 +221,28 @@ aside {
         flex-direction: column;
         align-items: flex-start;
     }
+    
+    .language {
+        align-items: flex-start;
+
+        ion-icon {
+            margin-right: 1em;
+        }
+    }
 
     dt {
         display: inline-flex;
+        font-family: $headerFont;
+        color : $darkBrown;
+        font-size: 1.5em;
+        margin-bottom: .6em;
     }
 
     dd {
         display: inline;
+        font-family: $paragraphsFont;
+        font-size: $paragraphs;
+        margin-left: 3em;
     }
 
     .modeWrap {
@@ -264,4 +279,119 @@ aside {
         color : $red;
     }
 
+    .rating {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-inline : 30px;
+    }
+
+    .innerWrap {
+        width : 30%;
+        display: flex;
+        align-items: center;
+        margin-top: 2em ;
+
+        img {
+            height : 100px;
+        }
+
+        p {
+            margin-left: .3em;
+            font-size: .8em;
+        }
+    }
+
+    .support {
+        padding : 20px;
+
+        img {
+            width : 200px;
+            height : 100px;
+        }
+
+        p {
+            margin-left: 0;
+        }
+
+        a {
+            display: flex;
+            align-items: center;
+            color : $darkBrown;
+            margin-top: 2em;
+            text-decoration: none;
+            transition: all 1s ease-in-out;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        h2 {
+            margin-top: 2em;
+            margin-left: 0;
+        }
+
+        .buttonWrap {
+            margin-top: 2em;
+            display: flex;
+            gap : 1em;
+            align-items: center;
+        }
+    }
+    .terms {
+        margin-top: 4em;
+        border-bottom: 1px solid $darkBrown;
+        padding-bottom: 4em;
+        
+        p {
+            margin-left: 0;
+            margin-bottom: 1em;
+            font-size: .8em;
+        }
+    }
+}
+
+// slideshow section
+.slideshow-bottom-container {
+    padding: 20px;
+
+    h2 {
+        font-size: 1.7em;
+        margin-bottom: 2em;
+    }
+
+    .slideShowItem {
+
+        h2 {
+            margin-bottom: .7em;
+        }
+    }
+
+}
+
+// recently viewed section
+.recent-view-wrap {
+    padding: 20px;
+
+    h2 {
+        font-size: 1.7em;
+        margin-bottom: 2em;
+    }
+
+    .recentView {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2em;
+        margin-bottom: 2em;
+
+        p,h2 {
+            text-align: left;
+        }
+        
+        h2 {
+            margin-bottom: .7em;
+        }
+    }
 }

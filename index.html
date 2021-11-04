@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="./node_modules/@splidejs/splide/dist/css/splide.min.css" class="rel">
     <!-- flag -->
     <link rel="stylesheet" href="./node_modules/flag-icon-css/css/flag-icons.css" class="rel">
-    <title>Document</title>
+    <link rel="icon" href="./asset/mario.png" class="rel" type="image/x-icon">
+    <title>Stardew Valley for Nintendo Switch - Nintendo Game Detail</title>
 </head>
 <body>
     <header>
@@ -237,9 +238,9 @@
                             </dd>
                         </dl>
                     </div>
-                    <div class="flex__item" style='background-color:#efefef'>
+                    <div class="flex__item rating" style='background-color:#efefef'>
                         <h2>ESRB Rating :</h2>
-                        <div class="modeWrap">
+                        <div class="innerWrap">
                             <img src="./asset/en-e10.svg" alt="" />
                             <div>
                                 <p>
@@ -250,119 +251,124 @@
                                 <p>User interact</p>
                             </div>
                         </div>
-                        <p>ConcernedApe</p>
                     </div>
                 </div>
-                <div class="support">
+                <div class="support" style="background-color: #efefef;">
                     <img src="./asset/logo-nso.svg" alt="">
                     <p>
                         Play online, access classic Super NES™ games, 
                         and more with a Nintendo Switch Online membership.
                     </p>
                     <a href="#">Learn More <span><ion-icon name="chevron-forward-outline"></ion-icon></span></a>
-                    <h2><ion-icon name="chevron-forward-outline"></ion-icon></h2>
+                    <h2>This game supports</h2>
                     <div class="buttonWrap">
-                        <button>Online Play</button>
-                        <button>Save Data Cloud</button>
+                        <button class="primary" style="width: 200px;">Online Play</button>
+                        <button class="primary" style="width: 200px;">Save Data Cloud</button>
                     </div>
                 </div>
-                <p>
-                    Nintendo Switch Online membership (sold separately) and Nintendo Account required for online play. 
-                    Not available in all countries. Internet access required for online features. Terms apply. <a href="#">nintendo.com/switch-online</a>
-                </p>
-                <p>Stardew Valley © ConcernedApe LLC 2016-2020. All rights reserved.</p>
+                <div class="terms">
+                    <p>
+                        Nintendo Switch Online membership (sold separately) and Nintendo Account required for online play. 
+                        Not available in all countries. Internet access required for online features. Terms apply. <a href="#">nintendo.com/switch-online</a>
+                    </p>
+                    <p>Stardew Valley © ConcernedApe LLC 2016-2020. All rights reserved.</p>
+                </div>
             </div>
         </section>
         <!-- slideshow games -->
         <section>
-            <h2>Customers who viewed this game also viewed</h2>
-            <div class="splide">
-                <div class="splide__track">
-                      <ul class="splide__list">
-                        <li class="splide__slide">
-                            <div class="slideShowItem">
-                                <img src="./asset/fortnite.avif" alt="">
-                                <p>06/12/18</p>
-                                <h2>Fortnite</h2>
-                                <h2>$0.00</h2>
-                                <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
-                            </div>  
-                        </li>
-                        <li class="splide__slide">
-                            <div class="slideShowItem">
-                                <img src="./asset/gta.avif" alt="">
-                                <p>06/15/20</p>
-                                <h2>Grand Theft Auto V</h2>
-                                <h2>$30.00</h2>
-                                <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
-                            </div>  
-                        </li>
-                        <li class="splide__slide">
-                            <div class="slideShowItem">
-                                <img src="./asset/minecraft.avif" alt="">
-                                <p>06/09/01</p>
-                                <h2>Minecraft</h2>
-                                <h2>$25.00</h2>
-                                <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
-                            </div>  
-                        </li>
-                        <li class="splide__slide">
-                            <div class="slideShowItem">
-                                <img src="./asset/pokemon_brilliant.avif" alt="">
-                                <p>22/19/21</p>
-                                <h2>Pokemon Brilliant</h2>
-                                <h2>$20.00</h2>
-                                <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
-                            </div>  
-                        </li>
-                        <li class="splide__slide">
-                            <div class="slideShowItem">
-                                <img src="./asset/animal_crossing.avif" alt="">
-                                <p>10/19/21</p>
-                                <h2>Animal Crossing</h2>
-                                <h2>$15.00</h2>
-                                <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
-                            </div>  
-                        </li>
-                        <li class="splide__slide">
-                            <div class="slideShowItem">
-                                <img src="./asset/super_entertainment.avif" alt="" />
-                                <p>11/19/18</p>
-                                <h2>Super Nintendo Entertainment</h2>
-                                <h2>$0.00</h2>
-                                <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
-                            </div>  
-                        </li>
-                        <li class="splide__slide">
-                            <div class="slideShowItem">
-                                <img src="./asset/nintendo_entertainment.png" alt="">
-                                <p>06/19/27</p>
-                                <h2>Nintendo Entertainment System</h2>
-                                <h2>$30.00</h2>
-                                <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
-                            </div>  
-                        <li class="splide__slide">
-                            <div class="slideShowItem">
-                                <img src="./asset/super_bros.jpg" alt="">
-                                <p>30/10/19</p>
-                                <h2>Super Smash Bros</h2>
-                                <h2>$50.00</h2>
-                                <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
-                            </div>  
-                        </li>
-                    </ul>
-                </div>
-            </div>            
+            <div class="slideshow-bottom-container">
+                <h2>Customers who viewed this game also viewed</h2>
+                <div class="splide">
+                    <div class="splide__track">
+                          <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="slideShowItem">
+                                    <img src="./asset/fortnite.avif" alt="">
+                                    <p>06/12/18</p>
+                                    <h2>Fortnite</h2>
+                                    <h2>$0.00</h2>
+                                    <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
+                                </div>  
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slideShowItem">
+                                    <img src="./asset/gta.avif" alt="">
+                                    <p>06/15/20</p>
+                                    <h2>Grand Theft Auto V</h2>
+                                    <h2>$30.00</h2>
+                                    <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
+                                </div>  
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slideShowItem">
+                                    <img src="./asset/minecraft.avif" alt="">
+                                    <p>06/09/01</p>
+                                    <h2>Minecraft</h2>
+                                    <h2>$25.00</h2>
+                                    <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
+                                </div>  
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slideShowItem">
+                                    <img src="./asset/pokemon_brilliant.avif" alt="">
+                                    <p>22/19/21</p>
+                                    <h2>Pokemon Brilliant</h2>
+                                    <h2>$20.00</h2>
+                                    <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
+                                </div>  
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slideShowItem">
+                                    <img src="./asset/animal_crossing.avif" alt="">
+                                    <p>10/19/21</p>
+                                    <h2>Animal Crossing</h2>
+                                    <h2>$15.00</h2>
+                                    <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
+                                </div>  
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slideShowItem">
+                                    <img src="./asset/super_entertainment.avif" alt="" />
+                                    <p>11/19/18</p>
+                                    <h2>Super Nintendo Entertainment</h2>
+                                    <h2>$0.00</h2>
+                                    <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
+                                </div>  
+                            </li>
+                            <li class="splide__slide">
+                                <div class="slideShowItem">
+                                    <img src="./asset/nintendo_entertainment.png" alt="">
+                                    <p>06/19/27</p>
+                                    <h2>Nintendo Entertainment System</h2>
+                                    <h2>$30.00</h2>
+                                    <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
+                                </div>  
+                            <li class="splide__slide">
+                                <div class="slideShowItem">
+                                    <img src="./asset/super_bros.jpg" alt="">
+                                    <p>30/10/19</p>
+                                    <h2>Super Smash Bros</h2>
+                                    <h2>$50.00</h2>
+                                    <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
+                                </div>  
+                            </li>
+                        </ul>
+                    </div>
+                </div>            
+            </div>
         </section>
         <!-- recently viewed -->
         <section>
-            <h2>Your recently viewed items</h2>
-            <div class="slideShowItem">
-                <img src="./asset/sd_small.avif" alt="">
-                <p>10/05/17</p>
-                <h2>Stardew Valley</h2>
-                <h2>$14.99</h2>
-                <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
+            <div class="recent-view-wrap">  
+                <h2>Your recently viewed items</h2>              
+                <div class="slideShowItem recentView">
+                    <img src="./asset/sd_small.avif" alt="">
+                    <p>10/05/17</p>
+                    <h2>Stardew Valley</h2>
+                    <h2>$14.99</h2>
+                    <p>Nintendo Switch <span><ion-icon name="heart-outline"></ion-icon></span></p>
+                </div>
             </div>
         </section>
     </main>
