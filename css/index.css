@@ -481,6 +481,7 @@ aside {
   font-size: 0.8em;
   margin-top: 1.5em;
   line-height: 1.5em;
+  margin-left: 0;
 }
 .gameDetail a {
   text-decoration: underline;
@@ -500,7 +501,7 @@ aside {
   padding-inline: 30px;
 }
 .gameDetail .innerWrap {
-  width: 30%;
+  width: 50%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -604,4 +605,172 @@ aside {
 }
 .recent-view-wrap .recentView h2 {
   margin-bottom: 0.7em;
+}
+
+footer .footerList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #DFF5F3;
+  padding: 20px;
+  border-top: 1px solid #434242;
+  cursor: pointer;
+}
+footer .region {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 0.5em;
+}
+footer h3, footer a {
+  color: #0b2b6b;
+  font-family: "Zen Old Mincho";
+  font-weight: 900;
+  font-size: 1.5em;
+}
+footer ion-icon {
+  font-size: 2em;
+  color: #0b2b6b;
+}
+footer .hiddenNav {
+  display: none;
+}
+footer .tabletFooterWrap {
+  display: none;
+}
+footer .desktopFooter {
+  display: none;
+}
+footer .bottomPart {
+  background-color: #07403B;
+  color: #5CC2BA;
+  padding: 20px;
+}
+footer .bottomPart .linkWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  gap: 1em;
+}
+footer .bottomPart a {
+  font-size: 1.1em;
+  color: #5CC2BA;
+}
+footer .bottomPart a:hover {
+  text-decoration: underline;
+}
+footer .bottomPart img {
+  width: 70px;
+  height: 100px;
+}
+footer .bottomPart .socialMediaWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+footer .bottomPart .facebook,
+footer .bottomPart .twitter,
+footer .bottomPart .instagram,
+footer .bottomPart .youtube {
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+footer .bottomPart ion-icon {
+  color: #ffffff;
+}
+footer .bottomPart .facebook {
+  background-color: #09B6EE;
+}
+footer .bottomPart .instagram {
+  background-color: #F9388D;
+}
+footer .bottomPart .twitter {
+  background-color: #09B6EE;
+}
+footer .bottomPart .youtube {
+  background-color: #EC0E2C;
+}
+footer .bottomPart p {
+  margin-top: 1em;
+  font-size: 0.7em;
+  text-align: center;
+}
+
+.sticky {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr 10px 1fr;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 10px 0;
+  position: sticky;
+  bottom: 0;
+  background-color: #ffffff;
+  gap: 10px;
+}
+.sticky .sticky_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+.sticky ion-icon, .sticky p {
+  color: #434242;
+}
+.sticky p {
+  max-width: 10ch;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+}
+.sticky .search {
+  padding: 8px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: #e60012;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  position: relative;
+  bottom: 20px;
+}
+.sticky .search ion-icon {
+  color: #ffffff;
+  font-size: 3em;
 }
