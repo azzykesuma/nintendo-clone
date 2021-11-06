@@ -14,6 +14,10 @@ p {
     font-family: $paragraphsFont;
 }
 
+header {
+    position: relative;
+}
+
 .topNav {
     display: flex;
     align-items: center;
@@ -39,7 +43,7 @@ p {
         div {
             display: flex;
             align-items: center;
-            gap : .4em;
+            gap : .2em;
 
             &:hover {
                 color : $red;
@@ -58,14 +62,164 @@ p {
 
     
     .hamburger {
-        font-size: 2em;
-        margin-right: .8em;
-        cursor: pointer;
+        display : flex;
+        flex-direction: column;
+        margin-right: 10px;
+        
+
+        .lineOne,
+        .lineTwo,
+        .lineThree {
+            width: 20px;
+            height: 4px;
+            background-color: $darkBrown;
+            transition: all .3s ease-in-out;
+        }
+    }
+
+    .hamburger.open {
+
+        .lineOne {
+            transform: rotate(45deg) translateY(10px);
+        };
+        .lineTwo {
+            transform: translateX(1000px);
+            opacity: 0;
+        };
+        .lineThree {
+            transform: rotate(-45deg) translateY(-10px);
+        };
     }
 }
 
 aside {
-    display: none;
+    // display: none;
+    opacity: 0;
+    width : 80%;
+    background-color: $lightGray;
+    position: absolute;
+    right : 0;
+    z-index: 2;
+    color : $darkBrown;
+    transform: translateX(3000px);
+    transition: all .8s ease-in-out;
+
+    nav {
+        padding : 10px;
+    }
+
+    ion-icon {
+        font-size: 2em;
+    }
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1.5em;
+        cursor: pointer;
+        
+        &:hover {
+            color : $red;
+        }
+    }
+
+    div {
+        display: flex;
+        gap : 10px;
+        align-items: center;
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        gap : 10px;
+        font-family: $headerFont;
+        color: $darkBrown;
+
+        &:hover {
+            color : $red;
+        }
+    }
+
+    .gamesNav {
+        display: none;
+        animation: scrollDown .5s ease-in-out;
+    }
+
+    @keyframes scrollDown {
+        from {
+            transform: translateX(1000px);
+        }
+        to {
+            transform: translateX(0px);
+        }
+    }
+
+    #gameCursorBar,#hardwareCursorBar {
+        transition: all .2s ease-in-out;
+    }
+    .gameCursorBar__open {
+        transform: rotateZ(180deg);
+    }
+
+    .gamesNav.gamesNav__open {
+        display: block;
+        opacity: 1;
+
+        ul {
+            display : grid;
+            gap : 1em;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(3, 100px);
+            margin-bottom: 1em;
+
+            li {
+                margin: 0 auto;
+            }
+
+            a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width : 100%;
+            }
+
+            button {
+                margin: 0 auto;
+                padding : 20px;
+                height: 70px;
+                width : 100px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: $white;
+                border: 1px solid $lightBlue;
+                border-radius: 10px;
+                transition: all .3s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $red;
+
+                    ion-icon {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .hardwareNav {
+        display: none;
+    }
+    
+}
+
+aside.isOpen {
+    opacity: 1;
+    transform : translateX(0);
 }
 
 .bottomNav {

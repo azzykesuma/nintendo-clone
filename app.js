@@ -29,4 +29,25 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+// hamburger function
+
+const hamburger = document.querySelector('.hamburger');
+const aside = document.getElementById('aside');
+
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  aside.classList.toggle('isOpen');
+});
+
+// aside nav function
+const hardwareNav = document.querySelector('.hardwareNav');
+const gamesNav = document.querySelector('.gamesNav');
+const game = document.getElementById('game');
+const gameCursorBar = document.getElementById('gameCursorBar');
+
+game.addEventListener('click', () => {
+  gamesNav.classList.toggle('gamesNav__open');
+  gameCursorBar.classList.toggle('gameCursorBar__open');
+});
 

@@ -38,26 +38,51 @@
             </ul>
             <div class="rightNav">
                 <div><ion-icon name="person"></ion-icon> <span>Log in</span></div>
-                <ion-icon name="reorder-three-outline" class="hamburger"></ion-icon>
+                <div class="hamburger">
+                    <div class="lineOne"></div>
+                    <div class="lineTwo"></div>
+                    <div class="lineThree"></div>
+                </div>
             </div>
         </div>
-        <aside>
+        <aside id="aside">
             <!-- sidebar -->
             <nav>
                 <ul>
-                    <li><a href="#">Search</a></li>
-                    <li><a href="#"><button>Games</button> <ion-icon name="chevron-down-outline"></ion-icon></a></li>
+                    <li>
+                        <div>
+                            <ion-icon name="search-outline"></ion-icon>
+                            <a href="">Search</a>
+                        </div>
+                    </li>
+                    <li id="game">
+                        <div>
+                            <ion-icon name="game-controller"></ion-icon>
+                            <a href="">Games</a>
+                        </div>
+                        <div>
+                            <ion-icon id="gameCursorBar" name="chevron-down-outline"></ion-icon>
+                        </div>
+                    </li>
                     <div class="gamesNav">
                         <ul>
-                            <li><a href="#"><button>Shop Games <span><ion-icon name="chevron-down-outline"></ion-icon></span></button></a></li>
-                            <li><a href="#"><button>Sales and deals <span><ion-icon name="chevron-down-outline"></ion-icon></span></button></a></li>
-                            <li><a href="#"><button>Coming soon</button></a></li>
-                            <li><a href="#"><button>Online Service</button></a></li>
-                            <li><a href="#"><button>Mobile games</button></a></li>
+                            <li><a href="#"><button><span><ion-icon name="game-controller"></ion-icon></span></button>Shop Games</a></li>
+                            <li><a href="#"><button><span><ion-icon name="pricetag"></ion-icon></span></button> Sales and deals</a></li>
+                            <li><a href="#"><button><span><ion-icon name="calendar"></ion-icon></span></button>Coming soon</a></li>
+                            <li><a href="#"><button><span><ion-icon name="wifi"></ion-icon></span></button> Online Service</a></li>
+                            <li><a href="#"><button><span><ion-icon name="phone-portrait"></ion-icon></span></button>Mobile games</a></li>
                         </ul>
                     </div>
-                    <li><a href="#"><button>Hardware</button> <ion-icon name="chevron-down-outline"></ion-icon></a></li>
-                    <div class="HardwareNav">
+                    <li>
+                        <div>
+                            <ion-icon name="desktop"></ion-icon>
+                            <a href="">Systems</a>
+                        </div>
+                        <div>
+                            <ion-icon id="hardwareCursorBar" name="chevron-down-outline"></ion-icon>
+                        </div>
+                    </li>
+                    <div class="hardwareNav">
                         <ul>
                             <ul>
                                 <li><a href="#"><button>Nintendo Switch Lineup</button></a></li>
@@ -66,14 +91,13 @@
                             </ul>
                         </ul>
                     </div>
-                    <li><a href="#">News and Events</a></li>
-                    <li><a href="#">Play Nintendo</a></li>
-                    <li><a href="#">Holiday Gift Guide</a></li>
+                    <li><a href="#"><span><ion-icon name="newspaper"></ion-icon></span> News and Events</a></li>
+                    <li><a href="#"><span><ion-icon name="star"></ion-icon></span> Play Nintendo</a></li>
+                    <li><a href="#"><span><ion-icon name="snow"></ion-icon></span> Holiday Gift Guide</a></li>
                     <hr />
                     <ul>
-                        <li><a href="#">Wish List</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Change Region</a></li>
+                        <li><a href="#"><span><ion-icon name="heart"></ion-icon></span> Wish List</a></li>
+                        <li><a href="#"><span><ion-icon name="help-circle"></ion-icon></span> Support</a></li>
                     </ul> 
                 </ul>
             </nav>
