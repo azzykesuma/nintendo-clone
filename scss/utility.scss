@@ -12,6 +12,29 @@
     justify-content: space-between;
     border-radius: 10px;
     margin-bottom: .7em;
+    transition: all .5s ease-out;
+
+    &:hover {
+        animation : bounce .5s ease-out;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    75% {
+        transform: scale(1.03);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .slideShowItem {

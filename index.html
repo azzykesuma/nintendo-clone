@@ -73,7 +73,7 @@
                             <li><a href="#"><button><span><ion-icon name="phone-portrait"></ion-icon></span></button>Mobile games</a></li>
                         </ul>
                     </div>
-                    <li>
+                    <li id='hardware'>
                         <div>
                             <ion-icon name="desktop"></ion-icon>
                             <a href="">Systems</a>
@@ -83,13 +83,11 @@
                         </div>
                     </li>
                     <div class="hardwareNav">
-                        <ul>
                             <ul>
-                                <li><a href="#"><button>Nintendo Switch Lineup</button></a></li>
-                                <li><a href="#"><button>Accessories</button></a></li>
-                                <li><a href="#"><button>amiibo</button></a></li>
+                                <li><a href="#"><button><img src="./asset/switch-lineup.png" alt=""></button></a>Nintendo Switch Lineup</li>
+                                <li><a href="#"><button><img class="controller" src="./asset/accessories.png" alt=""></button></a>Accessories</li>
+                                <li><a href="#"><button><img class="amiibo" src="./asset/amiibo.png" alt=""></button></a>Amiibo</li>
                             </ul>
-                        </ul>
                     </div>
                     <li><a href="#"><span><ion-icon name="newspaper"></ion-icon></span> News and Events</a></li>
                     <li><a href="#"><span><ion-icon name="star"></ion-icon></span> Play Nintendo</a></li>
@@ -98,6 +96,7 @@
                     <ul>
                         <li><a href="#"><span><ion-icon name="heart"></ion-icon></span> Wish List</a></li>
                         <li><a href="#"><span><ion-icon name="help-circle"></ion-icon></span> Support</a></li>
+                        <li><a href="#"><span class="flag-icon flag-icon-us"></span>Change Region</a></li>
                     </ul> 
                 </ul>
             </nav>
@@ -148,11 +147,45 @@
                 <button class="primary">Buy Digital <span><ion-icon name="chevron-forward-outline"></ion-icon></span></button>
                 <div>
                     <img src="./asset/gold-points.png" alt="">
-                    <p>Eligible for up to 75 points</p>
+                    <a class="coinEligible">Eligible for up to 75 points</a>
                 </div>
                 <div>
                     <ion-icon name="heart-outline"></ion-icon>
                     <a href="#">Add to Wish List</a>
+                </div>
+            </div>
+            <div class="modalImage">
+                <div class="modalHeader">
+                    <div class="modalNumber">1/6</div>
+                    <div class="modalRight">
+                        <ion-icon name="search-outline"></ion-icon>
+                        <ion-icon name="scan-outline"></ion-icon>
+                        <ion-icon id="close-icon" name="close-outline"></ion-icon>
+                    </div>
+                </div>
+
+                <div class="modalContent">
+                    <div class="modalSlides">
+                        <img src="./asset/screenshot01.jfif" alt="">
+                    </div>
+                    <div class="modalSlides">
+                        <img src="./asset/screenshot02.jfif" alt="">
+                    </div>
+                    <div class="modalSlides">
+                        <img src="./asset/screenshot03.jfif" alt="">
+                    </div>
+                    <div class="modalSlides">
+                        <img src="./asset/screenshot04.jfif" alt="">
+                    </div>
+                    <div class="modalSlides">
+                        <img src="./asset/screenshot05.jfif" alt="">
+                    </div>
+                    <div class="modalSlides">
+                        <img src="./asset/screenshot06.jfif" alt="">
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
             </div>
             <div class="hero__images">

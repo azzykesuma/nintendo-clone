@@ -160,8 +160,51 @@ a {
           justify-content: space-between;
   border-radius: 10px;
   margin-bottom: 0.7em;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.primary:hover {
+  -webkit-animation: bounce 0.5s ease-out;
+          animation: bounce 0.5s ease-out;
 }
 
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  75% {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+  }
+  75% {
+    -webkit-transform: scale(1.03);
+            transform: scale(1.03);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
 .slideShowItem {
   margin-right: 2em;
 }
@@ -274,7 +317,8 @@ header {
 
 aside {
   opacity: 0;
-  width: 80%;
+  width: 300px;
+  height: 800px;
   background-color: #efefef;
   position: absolute;
   right: 0;
@@ -356,7 +400,7 @@ aside #gameCursorBar, aside #hardwareCursorBar {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
-aside .gameCursorBar__open {
+aside .hardwareCursorBar__open, aside .gameCursorBar__open {
   -webkit-transform: rotateZ(180deg);
           transform: rotateZ(180deg);
 }
@@ -450,6 +494,79 @@ aside .gamesNav.gamesNav__open ul button:hover ion-icon {
 }
 aside .hardwareNav {
   display: none;
+  -webkit-animation: scrollDown 0.5s ease-in-out;
+          animation: scrollDown 0.5s ease-in-out;
+}
+aside .hardwareNav ul {
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  -ms-grid-rows: 100px 10px 100px;
+  grid-template-rows: 100px 100px;
+  -ms-grid-columns: 1fr 10px 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+aside .hardwareNav ul > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+aside .hardwareNav ul > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+aside .hardwareNav ul > *:nth-child(3) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+}
+aside .hardwareNav ul > *:nth-child(4) {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+}
+aside .hardwareNav li {
+  -webkit-box-pack: unset;
+      -ms-flex-pack: unset;
+          justify-content: unset;
+  margin-top: 0.5em;
+}
+aside .hardwareNav li:first-child {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+}
+aside .hardwareNav a, aside .hardwareNav button {
+  width: 100%;
+}
+aside .hardwareNav button {
+  margin-bottom: 0.8em;
+  background-color: #ffffff;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 1px solid #d6f0fa;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+aside .hardwareNav button:hover {
+  background-color: #e60012;
+}
+aside .hardwareNav li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+aside .hardwareNav .controller, aside .hardwareNav .amiibo {
+  width: 60px;
+  height: 60px;
+}
+aside .hardwareNav.hardwareNav__open {
+  display: block;
 }
 
 aside.isOpen {
@@ -512,8 +629,14 @@ aside.isOpen {
   width: 30px;
   height: 30px;
 }
-.heroData div p {
+.heroData div .coinEligible {
   margin-bottom: 0;
+  color: black;
+  font-weight: 400;
+  font-family: "Open Sans";
+}
+.heroData div .coinEligible:hover {
+  text-decoration: underline;
 }
 .heroData div ion-icon {
   font-size: 1.7em;
@@ -525,6 +648,61 @@ aside.isOpen {
 .heroData div a {
   font-weight: 900;
 }
+.heroData div a:hover {
+  text-decoration: underline;
+}
+
+.modalImage {
+  display: none;
+  background-color: black;
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  z-index: 3;
+}
+.modalImage .modalHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+}
+.modalImage .modalNumber {
+  font-size: 1.5em;
+  color: white;
+}
+.modalImage .modalRight {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-right: 10px;
+}
+.modalImage .modalRight ion-icon {
+  font-size: 1.5em;
+  color: white;
+}
+.modalImage .modalContent {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+.modalImage .modalSlides {
+  display: none;
+}
+
+.modalImage__open {
+  display: block;
+}
 
 .hero__images {
   width: 100%;
@@ -535,16 +713,20 @@ aside.isOpen {
   width: 100%;
   height: 100%;
   border: 1px solid #0b2b6b;
+  cursor: pointer;
+}
+.hero__images img:hover {
+  opacity: 0.8;
 }
 .hero__images .gridWrap {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 10px 50%;
+  -ms-grid-columns: 50% 5px 50%;
   grid-template-columns: 50% 50%;
-  -ms-grid-rows: 2fr 10px 100% 10px 100%;
+  -ms-grid-rows: 2fr 5px 100% 5px 100%;
   grid-template-rows: 2fr 100% 100%;
   padding: 20px;
-  gap: 10px;
+  gap: 5px;
 }
 .hero__images .gridWrap > *:nth-child(1) {
   -ms-grid-row: 1;
@@ -575,7 +757,6 @@ aside.isOpen {
       grid-column-start: 1;
   -ms-grid-column-span: -2;
   grid-column-end: -1;
-  width: 100%;
 }
 
 .heroDescription {
