@@ -404,13 +404,22 @@ aside.isOpen {
         max-width: 1200px;
     }
 
-    .modalSlides {
+    .slides-images {
         display: none;
+        position: relative;
+        top : 100%;
+        transform: translateY(-50%);
+        width: 100%;
+
+        img {
+            width : 100%;
+        }
     }
 }
 
 .modalImage__open {
-    display: block;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero__images {

@@ -76,19 +76,42 @@ const gridWrap = document.querySelector('.gridWrap');
 const images = gridWrap.querySelectorAll('img');
 const close = document.getElementById('close-icon')
 
-images.forEach(img => {
-  img.addEventListener('click', () => {
-    modalImage.classList.add('modalImage__open');
 
-    if(modalImage.classList.contains('modalImage__open')){
-      body.style.overflow = 'hidden';
-    } else {
-      body.style.overflow = 'auto';
-    }
-  });
-});
+function openlightBox() {
+  modalImage.classList.add('modalImage__open');
+}
 
 close.addEventListener('click', () => {
   modalImage.classList.remove('modalImage__open')
 })
+
+let modalIndex = 1;
+showModal(modalIndex);
+
+function changeSlide(n) {
+  showModal(modalIndex += n);
+  console.log(modalIndex)
+}
+
+function toSlide(n) {
+  showModal(modalIndex = n);
+  console.log(modalIndex)
+}
+
+function showModal(n) {
+  const slide = document.getElementsByClassName('slides-images');
+  if(n > slide.length) {
+    modalIndex = 1;
+  };
+
+  if (n < 1) {
+    modalIndex = slide.length;
+  }
+
+  for(let i = 0; i < slide.length; i++) {
+    slide[i].style.display = 'none';
+  }
+
+  slide[modalIndex - 1].style.display = 'block';
+}
 

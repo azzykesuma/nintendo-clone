@@ -696,12 +696,26 @@ aside.isOpen {
   width: 90%;
   max-width: 1200px;
 }
-.modalImage .modalSlides {
+.modalImage .slides-images {
   display: none;
+  position: relative;
+  top: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 100%;
+}
+.modalImage .slides-images img {
+  width: 100%;
 }
 
 .modalImage__open {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .hero__images {

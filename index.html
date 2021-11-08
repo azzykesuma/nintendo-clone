@@ -154,7 +154,7 @@
                     <a href="#">Add to Wish List</a>
                 </div>
             </div>
-            <div class="modalImage">
+            <div id="lightbox" class="modalImage">
                 <div class="modalHeader">
                     <div class="modalNumber">1/6</div>
                     <div class="modalRight">
@@ -163,45 +163,44 @@
                         <ion-icon id="close-icon" name="close-outline"></ion-icon>
                     </div>
                 </div>
+                    <div class="modal-content">
+                        <div class="slides-images">
+                            <img src="./asset/screenshot01.jfif" alt="">
+                        </div>
+                        <div class="slides-images">
+                            <img src="./asset/screenshot02.jfif" alt="">
+                        </div>
+                        <div class="slides-images">
+                            <img src="./asset/screenshot03.jfif" alt="">
+                        </div>
+                        <div class="slides-images">
+                            <img src="./asset/screenshot04.jfif" alt="">
+                        </div>
+                        <div class="slides-images">
+                            <img src="./asset/screenshot05.jfif" alt="">
+                        </div>
+                        <div class="slides-images">
+                            <img src="./asset/screenshot06.jfif" alt="">
+                        </div>
 
-                <div class="modalContent">
-                    <div class="modalSlides">
-                        <img src="./asset/screenshot01.jfif" alt="">
+                        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                        <a class="next" onclick="changeSlide(1)">&#10095;</a>
                     </div>
-                    <div class="modalSlides">
-                        <img src="./asset/screenshot02.jfif" alt="">
-                    </div>
-                    <div class="modalSlides">
-                        <img src="./asset/screenshot03.jfif" alt="">
-                    </div>
-                    <div class="modalSlides">
-                        <img src="./asset/screenshot04.jfif" alt="">
-                    </div>
-                    <div class="modalSlides">
-                        <img src="./asset/screenshot05.jfif" alt="">
-                    </div>
-                    <div class="modalSlides">
-                        <img src="./asset/screenshot06.jfif" alt="">
-                    </div>
-                    
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
             </div>
             <div class="hero__images">
                 <div class="slideshow-container">
                     <div class="mySlides fade">
                         <div class="gridWrap">                            
-                            <img class="firstImage" src="./asset/screenshot01.jfif" alt="">
-                            <img src="./asset/screenshot02.jfif" alt="">
-                            <img src="./asset/screenshot03.jfif" alt="">
-                            <img src="./asset/screenshot04.jfif" alt="">
-                            <img src="./asset/screenshot05.jfif" alt="">
+                            <img class="firstImage" src="./asset/screenshot01.jfif" alt="" onclick="openlightBox();toSlide(1)">
+                            <img src="./asset/screenshot02.jfif" alt="" onclick="openlightBox();toSlide(2)">
+                            <img src="./asset/screenshot03.jfif" alt=""  onclick="openlightBox();toSlide(3)">
+                            <img src="./asset/screenshot04.jfif" alt=""  onclick="openlightBox();toSlide(4)">
+                            <img src="./asset/screenshot05.jfif" alt=""  onclick="openlightBox();toSlide(5)">
                         </div>
                     </div>
                   
                     <div class="mySlides fade" style="padding: 20px;">
-                        <img src="./asset/screenshot06.jfif" alt="">
+                        <img src="./asset/screenshot06.jfif" alt=""  onclick="openlightBox();toSlide(6)">
                     </div>
                   
                     <!-- Next and previous buttons -->
