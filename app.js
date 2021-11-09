@@ -75,15 +75,23 @@ const modalImage = document.querySelector('.modalImage');
 const gridWrap = document.querySelector('.gridWrap');
 const images = gridWrap.querySelectorAll('img');
 const close = document.getElementById('close-icon')
+const heroData = document.querySelector('.heroData');
 
 
 function openlightBox() {
   modalImage.classList.add('modalImage__open');
+
+  if(modalImage.classList.contains('modalImage__open')) {
+    sticky.style.display = 'none';
+    heroData.style.backgroundColor = 'rgba(0,0,0,0.5)';
+  }
 }
 
-close.addEventListener('click', () => {
-  modalImage.classList.remove('modalImage__open')
-})
+function closeLightBox() {
+  modalImage.classList.remove('modalImage__open');
+  sticky.style.display = 'grid';
+  heroData.style.backgroundColor = 'rgba(0,0,0,0)';
+}
 
 let modalIndex = 1;
 showModal(modalIndex);
@@ -100,6 +108,7 @@ function toSlide(n) {
 
 function showModal(n) {
   const slide = document.getElementsByClassName('slides-images');
+ 
   if(n > slide.length) {
     modalIndex = 1;
   };
@@ -113,5 +122,20 @@ function showModal(n) {
   }
 
   slide[modalIndex - 1].style.display = 'block';
+  document.querySelector('.modalNumber').innerHTML = ` ${modalIndex} / 6`
 }
+
+// zooming images onclick
+// const slidesImage = document.querySelectorAll('.slides-images');
+
+// slidesImage.forEach(image => {
+//   image.addEventListener('click', zoom(image));
+// });
+
+// // make zoom function;
+// function zoom(img) {
+//   img.style.transform = 'scale(1.5)';
+//   console.log(`mkl;`)
+// }
+
 

@@ -654,7 +654,6 @@ aside.isOpen {
 
 .modalImage {
   display: none;
-  background-color: black;
   width: 100%;
   height: 500px;
   position: absolute;
@@ -688,20 +687,16 @@ aside.isOpen {
   font-size: 1.5em;
   color: white;
 }
-.modalImage .modalContent {
+.modalImage .modal-content {
   position: relative;
-  background-color: #fefefe;
-  margin: auto;
   padding: 0;
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
+  height: 100%;
 }
 .modalImage .slides-images {
   display: none;
-  position: relative;
-  top: 100%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  position: absolute;
+  top: 30%;
   width: 100%;
 }
 .modalImage .slides-images img {
@@ -716,6 +711,8 @@ aside.isOpen {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 80vh;
 }
 
 .hero__images {

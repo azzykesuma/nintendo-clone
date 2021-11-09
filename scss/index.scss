@@ -363,7 +363,6 @@ aside.isOpen {
 
 .modalImage {
     display: none;
-    background-color: black;
     width : 100%;
     height : 500px;
     position: absolute;
@@ -395,20 +394,17 @@ aside.isOpen {
         }
     }
 
-    .modalContent {
+    .modal-content {
         position: relative;
-        background-color: #fefefe;
-        margin: auto;
         padding: 0;
-        width: 90%;
-        max-width: 1200px;
+        width: 100%;
+        height: 100%;
     }
 
     .slides-images {
         display: none;
-        position: relative;
-        top : 100%;
-        transform: translateY(-50%);
+        position: absolute;
+        top : 30%;
         width: 100%;
 
         img {
@@ -420,6 +416,8 @@ aside.isOpen {
 .modalImage__open {
     display: flex;
     flex-direction: column;
+    background-color: rgba(0,0,0,0.5);
+    height: 80vh;
 }
 
 .hero__images {
