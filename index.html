@@ -234,23 +234,31 @@
                 <div class="flex__wrap">
                     <div style='background-color:#efefef' class="flex__item">
                         <ion-icon name="calendar-outline"></ion-icon>
-                        <h2>Release Date: </h2>
-                        <p>October 05, 2017</p>
+                        <div>
+                            <h2>Release Date:</h2>
+                            <p>October 05, 2017</p>
+                        </div>
                     </div>
                     <div class="flex__item">
                         <ion-icon name="people"></ion-icon>
-                        <h2>Players: </h2>
-                        <p>up to 4 players</p>
+                        <div>
+                            <h2>Players: </h2>
+                            <p>up to 4 players</p>
+                        </div>
                     </div>
                     <div class="flex__item" style='background-color:#efefef'>
                         <ion-icon name="game-controller"></ion-icon>
-                        <h2>Genre: </h2>
-                        <p>Indie, Simulation, Role-Playing</p>
+                        <div>
+                            <h2>Genre: </h2>
+                            <p>Indie, Simulation, Role-Playing</p>
+                        </div>
                     </div>
                     <div class="flex__item">
                         <ion-icon name="business"></ion-icon>
-                        <h2>Publisher: </h2>
-                        <p>ConcernedApe</p>
+                        <div>
+                            <h2>Publisher: </h2>
+                            <p>ConcernedApe</p>
+                        </div>
                     </div>
                     <div class="flex__item game_support" style='background-color:#efefef'>
                         <h2>Supported Play Modes :</h2>
@@ -277,13 +285,17 @@
                 <div class="flex__wrap">
                     <div  class="flex__item"style='background-color:#efefef'>
                         <ion-icon name="cog"></ion-icon>
-                        <h2>Developer: </h2>
-                        <p>ConcernedApe</p>
+                        <div>
+                            <h2>Developer: </h2>
+                            <p>ConcernedApe</p>
+                        </div>
                     </div>
                     <div class="flex__item">
                         <ion-icon name="folder"></ion-icon>
-                        <h2>Game file size: </h2>
-                        <p>1.5 GB</p>
+                        <div>
+                            <h2>Game file size: </h2>
+                            <p>1.5 GB</p>
+                        </div>
                     </div>
                     <div class="flex__item language">
                         <ion-icon name="globe-outline"></ion-icon>
@@ -299,7 +311,7 @@
                         <div class="innerWrap">
                             <img src="./asset/en-e10.svg" alt="" />
                             <div>
-                                <p>
+                                <p style="border-bottom: 2px solid #434242;">
                                     Simulated gambling, use of alcohol, fantasy violence,
                                     use of tobacco, mild blood, mild language
                                 </p>
@@ -335,10 +347,10 @@
         <section>
             <div class="slideshow-bottom-container">
                 <h2>Customers who viewed this game also viewed</h2>
-                <div class="splide">
+                <div class="splide slideshow-bottom-wrap">
                     <div class="splide__track">
                           <ul class="splide__list">
-                            <li class="splide__slide">
+                            <li class="splide__slide" style="width: 200px !important;">
                                 <div class="slideShowItem">
                                     <img src="./asset/fortnite.avif" alt="">
                                     <p>06/12/18</p>
@@ -435,12 +447,12 @@
             <div class="mobileFooterWrap">
                 <ul>
                     <li>
-                        <div class="footerNavItem">
+                        <div id="games__footer" class="footerNavItem">
                             <div class="footerList">
                                 <h3>Games</h3>
                                 <div><ion-icon name="chevron-down-outline"></ion-icon></div>
                             </div>
-                            <div class="hiddenNav">
+                            <div id="games__footer__hidden" class="hiddenNav">
                                 <ul>
                                     <li><a href="#">Coming Soon</a></li>
                                     <li><a href="#">Nintendo Switch</a></li>
@@ -628,6 +640,7 @@
     var splide = new Splide( '.splide', {
     perPage: 3,
     rewind : true,
+    width : '100%'
     } );
 
     splide.mount();

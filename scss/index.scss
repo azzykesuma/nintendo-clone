@@ -2,6 +2,7 @@
 @import './variable.scss';
 @import './slideshow.scss';
 @import './utility.scss';
+@import './mixin.scss';
 
 h2 {
     font-size: $headerTwo;
@@ -463,7 +464,8 @@ aside.isOpen {
     }
 
     .btn_explore {
-        width : 350px;
+        font-size: 1.1em;
+        width : 300px;
     }
 }
 
@@ -473,13 +475,48 @@ aside.isOpen {
     .flex__wrap {
         display: flex;
         flex-direction: column;
+
     }
 
     .flex__item {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         margin-bottom: 1em;
-        padding : 10px;
+        padding : 15px 10px;
+        gap : .5em;
+
+        div {
+            display: flex;
+            flex-direction: column;
+
+            p,h2 {
+                margin-left: 0;
+            }
+
+            h2 {
+                margin-bottom: .5em;
+
+                @include mQ(21.875em) {
+                    margin-bottom: 0;
+                }
+            }
+
+            p {
+
+                @include mQ(21.875em) {
+                    margin-left: .5em;
+                }
+            }
+
+            @include mQ(21.875em) {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+
+        @include mQ(21.875em) {
+            align-items: center;
+        }
     }
 
     ion-icon {
@@ -504,6 +541,7 @@ aside.isOpen {
     
     .language {
         align-items: flex-start;
+        justify-content: center;
 
         ion-icon {
             margin-right: 1em;
@@ -522,11 +560,15 @@ aside.isOpen {
         display: inline;
         font-family: $paragraphsFont;
         font-size: $paragraphs;
-        margin-left: 3em;
+        margin-left: 0;
+
+        @include mQ(21.875em) {
+            margin-left: 3em;
+        }
     }
 
     .modeWrap {
-        display: flex;
+        display: flex !important; 
         justify-content: space-evenly;
         gap : 1em;
         margin-top: 2em;
@@ -573,6 +615,10 @@ aside.isOpen {
         align-items: center;
         margin-top: 2em ;
 
+        div {
+            flex-direction: column;
+        }
+
         img {
             height : 100px;
         }
@@ -580,6 +626,8 @@ aside.isOpen {
         p {
             margin-left: .3em;
             font-size: .8em;
+            min-width: 20ch;
+            padding-bottom: 10px;
         }
     }
 
@@ -616,8 +664,22 @@ aside.isOpen {
         .buttonWrap {
             margin-top: 2em;
             display: flex;
+            flex-direction: row;
             gap : 1em;
             align-items: center;
+
+            @include mQ(21.875em) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            button {
+                margin-bottom: 0.7em;
+
+                @include mQ(21.875em) {
+                    margin-bottom: 0;
+                }
+            }
         }
     }
     .terms {
@@ -636,16 +698,32 @@ aside.isOpen {
 // slideshow section
 .slideshow-bottom-container {
     padding: 20px;
+    position: relative;
+    margin-bottom: 20em;
 
     h2 {
         font-size: 1.7em;
         margin-bottom: 2em;
     }
 
+    .slideshow-bottom-wrap {
+        position: absolute;
+    }
+
     .slideShowItem {
+        // width : 50%;
+        img {
+            width : 150px;
+            height : 100px;
+        }
 
         h2 {
             margin-bottom: .7em;
+            font-size: 1.1em;
+        }
+
+        li {
+            width: 200px;
         }
     }
 
@@ -684,6 +762,10 @@ footer {
     // .footerNavItem {
 
     // }
+
+    .footerNavItem {
+        cursor: pointer;
+    }
     .footerList {
         display: flex;
         align-items: center;

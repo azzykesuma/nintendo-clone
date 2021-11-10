@@ -125,17 +125,16 @@ function showModal(n) {
   document.querySelector('.modalNumber').innerHTML = ` ${modalIndex} / 6`
 }
 
-// zooming images onclick
-// const slidesImage = document.querySelectorAll('.slides-images');
+// footer functions
+const mobileFooterWrap = document.querySelector('.mobileFooterWrap');
 
-// slidesImage.forEach(image => {
-//   image.addEventListener('click', zoom(image));
-// });
 
-// // make zoom function;
-// function zoom(img) {
-//   img.style.transform = 'scale(1.5)';
-//   console.log(`mkl;`)
-// }
+mobileFooterWrap.addEventListener('click', (e) => {
+  const target = e.target.id;
+  if(target === 'games__footer') {
+    console.log(`njklo;`)
+  }
+})
+
 
 

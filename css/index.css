@@ -781,7 +781,8 @@ aside.isOpen {
   line-height: 1.5em;
 }
 .heroDescription .btn_explore {
-  width: 350px;
+  font-size: 1.1em;
+  width: 300px;
 }
 
 .gameDetail {
@@ -800,11 +801,55 @@ aside.isOpen {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   margin-bottom: 1em;
-  padding: 10px;
+  padding: 15px 10px;
+  gap: 0.5em;
+}
+.gameDetail .flex__item div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.gameDetail .flex__item div p, .gameDetail .flex__item div h2 {
+  margin-left: 0;
+}
+.gameDetail .flex__item div h2 {
+  margin-bottom: 0.5em;
+}
+@media screen and (min-width: 21.875em) {
+  .gameDetail .flex__item div h2 {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 21.875em) {
+  .gameDetail .flex__item div p {
+    margin-left: 0.5em;
+  }
+}
+@media screen and (min-width: 21.875em) {
+  .gameDetail .flex__item div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+@media screen and (min-width: 21.875em) {
+  .gameDetail .flex__item {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 .gameDetail ion-icon {
   font-size: 2em;
@@ -833,6 +878,9 @@ aside.isOpen {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .gameDetail .language ion-icon {
   margin-right: 1em;
@@ -850,12 +898,17 @@ aside.isOpen {
   display: inline;
   font-family: "Open Sans";
   font-size: 1.1em;
-  margin-left: 3em;
+  margin-left: 0;
+}
+@media screen and (min-width: 21.875em) {
+  .gameDetail dd {
+    margin-left: 3em;
+  }
 }
 .gameDetail .modeWrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -915,12 +968,20 @@ aside.isOpen {
           align-items: center;
   margin-top: 2em;
 }
+.gameDetail .innerWrap div {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
 .gameDetail .innerWrap img {
   height: 100px;
 }
 .gameDetail .innerWrap p {
   margin-left: 0.3em;
   font-size: 0.8em;
+  min-width: 20ch;
+  padding-bottom: 10px;
 }
 .gameDetail .support {
   padding: 20px;
@@ -957,10 +1018,33 @@ aside.isOpen {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   gap: 1em;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media screen and (min-width: 21.875em) {
+  .gameDetail .support .buttonWrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+.gameDetail .support .buttonWrap button {
+  margin-bottom: 0.7em;
+}
+@media screen and (min-width: 21.875em) {
+  .gameDetail .support .buttonWrap button {
+    margin-bottom: 0;
+  }
 }
 .gameDetail .terms {
   margin-top: 4em;
@@ -975,13 +1059,26 @@ aside.isOpen {
 
 .slideshow-bottom-container {
   padding: 20px;
+  position: relative;
+  margin-bottom: 20em;
 }
 .slideshow-bottom-container h2 {
   font-size: 1.7em;
   margin-bottom: 2em;
 }
+.slideshow-bottom-container .slideshow-bottom-wrap {
+  position: absolute;
+}
+.slideshow-bottom-container .slideShowItem img {
+  width: 150px;
+  height: 100px;
+}
 .slideshow-bottom-container .slideShowItem h2 {
   margin-bottom: 0.7em;
+  font-size: 1.1em;
+}
+.slideshow-bottom-container .slideShowItem li {
+  width: 200px;
 }
 
 .recent-view-wrap {
@@ -1012,6 +1109,9 @@ aside.isOpen {
   margin-bottom: 0.7em;
 }
 
+footer .footerNavItem {
+  cursor: pointer;
+}
 footer .footerList {
   display: -webkit-box;
   display: -ms-flexbox;
