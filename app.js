@@ -131,10 +131,29 @@ const mobileFooterWrap = document.querySelector('.mobileFooterWrap');
 
 mobileFooterWrap.addEventListener('click', (e) => {
   const target = e.target.id;
-  if(target === 'games__footer') {
-    console.log(`njklo;`)
+  const games_footer = document.getElementById('games_footer');
+  const explore = document.getElementById('explore__more')
+  const support = document.getElementById('support');
+  const buy = document.getElementById('where__buy');
+  const precaution = document.getElementById('health_safety_precaution');
+  const arrowIcon = document.getElementById('arrowIcon');
+
+  if(target === games_footer.id) {
+    const children = document.getElementById('games_footer').nextElementSibling;
+    children.classList.toggle('openFooterNav')
+  } else if (target === explore.id) {
+    const children = document.getElementById('explore__more').nextElementSibling;
+      children.classList.toggle('openFooterNav')
+  } else if (target === support.id) {
+    const children = document.getElementById('support').nextElementSibling;
+      children.classList.toggle('openFooterNav')
+  } else if (target === buy.id) {
+    const children = document.getElementById('where__buy').nextElementSibling;
+      children.classList.toggle('openFooterNav')
+  } else if (target === precaution.id) {
+    const children = document.getElementById('health_safety_precaution').nextElementSibling;
+      children.classList.toggle('openFooterNav')
   }
 })
-
 
 

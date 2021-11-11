@@ -711,10 +711,14 @@ aside.isOpen {
     }
 
     .slideShowItem {
-        // width : 50%;
         img {
-            width : 150px;
-            height : 100px;
+            width : 80%;
+            height : 80%;
+
+            @include mQ(28.75em) {
+                width : 150px;
+                height : 100px;
+            }
         }
 
         h2 {
@@ -792,9 +796,17 @@ footer {
         font-size: 2em;
         color : $darkBlue;
     }
+     
 
     .hiddenNav {
-        display: none;
+       display: none;
+       height : 0;
+       transition: all 1s ease-in-out;
+    }
+
+    .openFooterNav{
+        display: block;
+        height: 200px;
     }
 
     .tabletFooterWrap {

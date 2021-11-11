@@ -27,6 +27,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  overflow-x: hidden;
 }
 
 ol, ul {
@@ -1070,8 +1071,14 @@ aside.isOpen {
   position: absolute;
 }
 .slideshow-bottom-container .slideShowItem img {
-  width: 150px;
-  height: 100px;
+  width: 80%;
+  height: 80%;
+}
+@media screen and (min-width: 28.75em) {
+  .slideshow-bottom-container .slideShowItem img {
+    width: 150px;
+    height: 100px;
+  }
 }
 .slideshow-bottom-container .slideShowItem h2 {
   margin-bottom: 0.7em;
@@ -1145,6 +1152,13 @@ footer ion-icon {
 }
 footer .hiddenNav {
   display: none;
+  height: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+footer .openFooterNav {
+  display: block;
+  height: 200px;
 }
 footer .tabletFooterWrap {
   display: none;
