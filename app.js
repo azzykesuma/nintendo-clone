@@ -136,24 +136,56 @@ mobileFooterWrap.addEventListener('click', (e) => {
   const support = document.getElementById('support');
   const buy = document.getElementById('where__buy');
   const precaution = document.getElementById('health_safety_precaution');
-  const arrowIcon = document.getElementById('arrowIcon');
+  const arrowIcon = document.querySelectorAll('.arrowIcon');
+  console.log(arrowIcon)
 
   if(target === games_footer.id) {
     const children = document.getElementById('games_footer').nextElementSibling;
     children.classList.toggle('openFooterNav')
+    
+    if(children.classList.contains('openFooterNav')) {
+      arrowIcon[0].classList.toggle('arrowIcon__open');
+    } else {
+      arrowIcon[0].classList.toggle('arrowIcon__open');
+    }
   } else if (target === explore.id) {
     const children = document.getElementById('explore__more').nextElementSibling;
-      children.classList.toggle('openFooterNav')
+    children.classList.toggle('openFooterNav')
+
+    if(children.classList.contains('openFooterNav')) {
+      arrowIcon[1].classList.toggle('arrowIcon__open');
+    } else {
+      arrowIcon[1].classList.toggle('arrowIcon__open');
+    }
   } else if (target === support.id) {
     const children = document.getElementById('support').nextElementSibling;
-      children.classList.toggle('openFooterNav')
+    children.classList.toggle('openFooterNav')
+    
+    if(children.classList.contains('openFooterNav')) {
+      arrowIcon[2].classList.toggle('arrowIcon__open');
+    } else {
+      arrowIcon[2].classList.toggle('arrowIcon__open');
+    }
   } else if (target === buy.id) {
     const children = document.getElementById('where__buy').nextElementSibling;
-      children.classList.toggle('openFooterNav')
+    children.classList.toggle('openFooterNav')
+
+    if(children.classList.contains('openFooterNav')) {
+      arrowIcon[3].classList.toggle('arrowIcon__open');
+    } else {
+      arrowIcon[3].classList.toggle('arrowIcon__open');
+    }  
   } else if (target === precaution.id) {
     const children = document.getElementById('health_safety_precaution').nextElementSibling;
-      children.classList.toggle('openFooterNav')
+    children.classList.toggle('openFooterNav')
+
+    if(children.classList.contains('openFooterNav')) {
+      arrowIcon[4].classList.toggle('arrowIcon__open');
+    } else {
+      arrowIcon[4].classList.toggle('arrowIcon__open');
+    }
   }
+
 })
 
 

@@ -22,19 +22,20 @@
         <div class="topNav">
             <div>
                 <img src="./asset/logo.png" alt="" />
-                <form action="">
-                    <label for="search"></label>
-                    <input type="text" 
-                    name='search' 
-                    id="search"
-                    placeholder="Search game, systems, support, etc."
-                    />
-                </form>
             </div>
+            <form action="">
+                <label for="search"></label>
+                <input type="text" 
+                name='search' 
+                id="search"
+                placeholder="Search"
+                />
+                <ion-icon name="search"></ion-icon>
+            </form>
             <ul>
-                <li><a href="#">support</a></li>
-                <li><a href="#">Wish List</a></li>
-                <li><a href="#">Log in /Sign up</a></li>
+                <li><a href="#"><span><ion-icon name="help-circle-outline"></ion-icon></span> support</a></li>
+                <li><a href="#"><span><ion-icon name="heart"></ion-icon></span> Wish List</a></li>
+                <li><a href="#"><span><ion-icon name="person"></ion-icon></span> Log in /Sign up</a></li>
             </ul>
             <div class="rightNav">
                 <div><ion-icon name="person"></ion-icon> <span>Log in</span></div>
@@ -104,11 +105,11 @@
         <div class="bottomNav">
             <nav>
                 <ul>
-                    <li id="games">Games</li>
-                    <li id="hardware">Hardware</li>
-                    <li>News and Events</li>
-                    <li>Play Nintendo</li>
-                    <li>Holiday Gift Guide</li>
+                    <li id="games"><span><ion-icon name="game-controller"></ion-icon></span> Games <span><ion-icon name="chevron-down"></ion-icon></span></li>
+                    <li id="hardware"><span><ion-icon name="calculator"></ion-icon></span> Hardware <span><ion-icon name="chevron-down"></ion-icon></span></li>
+                    <li><span><ion-icon name="newspaper"></ion-icon></span> News and Events <span><ion-icon name="chevron-down"></ion-icon></span></li>
+                    <li><span><ion-icon name="star"></ion-icon></span> Play Nintendo <span><ion-icon name="chevron-down"></ion-icon></span></li>
+                    <li><span><ion-icon name="snow"></ion-icon></span> Holiday Gift Guide <span><ion-icon name="chevron-down"></ion-icon></span></li>
                 </ul>
             </nav>
             <!-- accessible only when clicked -->
@@ -122,7 +123,7 @@
                 </ul>
                 <ion-icon name="close-outline"></ion-icon>
             </div>
-            <div class="HardwareNav">
+            <div class="hardwareNav">
                 <ul>
                     <ul>
                         <li><a href="#"><button>Nintendo Switch Lineup</button></a></li>
@@ -138,6 +139,7 @@
         <section>
             <div class="heroContainer">
                 <img src="./asset/hero.jfif" alt="" />
+                <img class="rating" src="./asset/ESRB-certified.svg" alt="">
             </div>
             <div class="heroData">
                 <p class="console">Nintendo Switch</p>
@@ -450,7 +452,7 @@
                         <div class="footerNavItem">
                             <div class="footerList" id="games_footer">
                                 <h3>Games</h3>
-                                <div id="arrowIcon"><ion-icon name="chevron-down-outline"></ion-icon></div>
+                                <div class="arrowIcon"><ion-icon name="chevron-down-outline"></ion-icon></div>
                             </div>
                             <div id="games__footer__hidden" class="hiddenNav">
                                 <ul>
@@ -466,7 +468,7 @@
                         <div class="footerNavItem">
                             <div class="footerList" id="explore__more">
                                 <h3>Explore More</h3>
-                                <span><ion-icon name="chevron-down-outline"></ion-icon></span>
+                                <span class="arrowIcon"><ion-icon name="chevron-down-outline"></ion-icon></span>
                             </div>
                             <div class="hiddenNav">
                                 <ul>
@@ -481,7 +483,7 @@
                         <div class="footerNavItem">
                             <div class="footerList" id="support">
                                 <h3>Support</h3>
-                                <div><ion-icon name="chevron-down-outline"></ion-icon></div>
+                                <div class="arrowIcon"><ion-icon name="chevron-down-outline"></ion-icon></div>
                             </div>
                             <div class="hiddenNav">
                                 <ul>
@@ -499,7 +501,7 @@
                         <div class="footerNavItem">
                             <div class="footerList" id="where__buy">
                                 <h3>Where to buy</h3>
-                                <div><ion-icon name="chevron-down-outline"></ion-icon></div>
+                                <div class="arrowIcon"><ion-icon name="chevron-down-outline"></ion-icon></div>
                             </div>
                             <div class="hiddenNav">
                                 <ul>
@@ -515,7 +517,7 @@
                         <div class="footerNavItem">
                             <div class="footerList" id="health_safety_precaution">
                                 <h3>Health & Safety/Privacy</h3>
-                                <div><ion-icon name="chevron-down-outline"></ion-icon></div>
+                                <div class="arrowIcon"><ion-icon name="chevron-down-outline"></ion-icon></div>
                             </div>
                             <div class="hiddenNav">
                                 <ul>
@@ -605,8 +607,8 @@
                         <div class="instagram"><ion-icon name="logo-instagram"></ion-icon></div>
                         <div class="twitter"><ion-icon name="logo-twitter"></ion-icon></div>
                         <div class="youtube"><ion-icon name="logo-youtube"></ion-icon></div>
-                        <img src="./asset/ESRB-certified.svg" alt="">
                     </div>
+                    <img src="./asset/ESRB-certified.svg" alt="">
                 </div>
                 <p>
                     © 2021 Nintendo. Games are property of their respective owners. <br>

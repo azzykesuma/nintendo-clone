@@ -255,8 +255,89 @@ header {
 .topNav ul {
   display: none;
 }
+.topNav ul a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Open Sans";
+  color: #434242;
+  font-weight: 900;
+  gap: 0.5em;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.topNav ul a ion-icon {
+  font-size: 1.5em;
+}
+.topNav ul a:hover {
+  color: #e60012;
+}
+@media screen and (min-width: 47.8125em) {
+  .topNav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 0.8em;
+  }
+}
 .topNav form {
   display: none;
+  position: relative;
+  width: 250px;
+}
+.topNav form input {
+  border: none;
+  padding-left: 20px;
+  padding-bottom: 5px;
+  width: 100%;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.topNav form input:focus {
+  outline: none;
+}
+.topNav form input:hover {
+  border-bottom: 1px solid #e60012;
+}
+.topNav form input::-webkit-input-placeholder {
+  color: #434242;
+  font-size: 1.3em;
+  font-family: "Open Sans";
+}
+.topNav form input::-moz-placeholder {
+  color: #434242;
+  font-size: 1.3em;
+  font-family: "Open Sans";
+}
+.topNav form input:-ms-input-placeholder {
+  color: #434242;
+  font-size: 1.3em;
+  font-family: "Open Sans";
+}
+.topNav form input::-ms-input-placeholder {
+  color: #434242;
+  font-size: 1.3em;
+  font-family: "Open Sans";
+}
+.topNav form input::placeholder {
+  color: #434242;
+  font-size: 1.3em;
+  font-family: "Open Sans";
+}
+.topNav form ion-icon {
+  position: absolute;
+  left: -10px;
+  top: -5px;
+  font-size: 1.5em;
+}
+@media screen and (min-width: 47.8125em) {
+  .topNav form {
+    display: block;
+    position: relative;
+  }
 }
 .topNav .rightNav {
   display: -webkit-box;
@@ -282,6 +363,11 @@ header {
   color: #434242;
   font-weight: 900;
   cursor: pointer;
+}
+@media screen and (min-width: 47.8125em) {
+  .topNav .rightNav {
+    display: none;
+  }
 }
 .topNav .hamburger {
   display: -webkit-box;
@@ -579,8 +665,24 @@ aside.isOpen {
 .bottomNav {
   display: none;
 }
+@media screen and (min-width: 47.8125em) {
+  .bottomNav {
+    display: block;
+    border-top: 1px solid #434242;
+  }
+  .bottomNav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 1em;
+    padding: 20px;
+  }
+}
 
-.gameNav {
+.gamesNav {
   display: none;
 }
 
@@ -593,6 +695,26 @@ aside.isOpen {
 }
 .heroContainer img {
   width: 100%;
+}
+.heroContainer .rating {
+  display: none;
+  height: 100px;
+  width: 80px;
+}
+@media screen and (min-width: 47.8125em) {
+  .heroContainer .rating {
+    display: block;
+    position: absolute;
+    bottom: 14.5em;
+    right: 2em;
+  }
+}
+@media screen and (min-width: 47.8125em) {
+  .heroContainer {
+    padding: 20px;
+    width: auto;
+    background-color: #d6f0fa;
+  }
 }
 
 .heroData {
@@ -1153,12 +1275,65 @@ footer ion-icon {
 footer .hiddenNav {
   display: none;
   height: 0;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
+  -webkit-animation: appear 0.5s ease-in-out;
+          animation: appear 0.5s ease-in-out;
 }
 footer .openFooterNav {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   height: 200px;
+  padding: 10px;
+}
+footer .openFooterNav li {
+  margin-bottom: 1em;
+}
+footer .openFooterNav a {
+  font-family: "Open Sans";
+  font-size: 1.3em;
+  color: #434242;
+}
+footer .openFooterNav a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+footer .arrowIcon {
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+footer .arrowIcon__open {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+@-webkit-keyframes appear {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 200px;
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: 200px;
+    opacity: 1;
+  }
 }
 footer .tabletFooterWrap {
   display: none;
@@ -1191,9 +1366,29 @@ footer .bottomPart a {
 footer .bottomPart a:hover {
   text-decoration: underline;
 }
+footer .bottomPart .footerGridWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 footer .bottomPart img {
-  width: 70px;
-  height: 100px;
+  width: 50px;
+  height: 80px;
+  text-align: center;
+  margin-top: 1em;
+}
+@media screen and (min-width: 21.875em) {
+  footer .bottomPart img {
+    width: 70px;
+    height: 100px;
+  }
 }
 footer .bottomPart .socialMediaWrap {
   display: -webkit-box;
@@ -1203,6 +1398,7 @@ footer .bottomPart .socialMediaWrap {
       -ms-flex-align: center;
           align-items: center;
   gap: 20px;
+  margin-top: 0.8em;
 }
 footer .bottomPart .facebook,
 footer .bottomPart .twitter,
