@@ -137,24 +137,20 @@ mobileFooterWrap.addEventListener('click', (e) => {
   const buy = document.getElementById('where__buy');
   const precaution = document.getElementById('health_safety_precaution');
   const arrowIcon = document.querySelectorAll('.arrowIcon');
-  console.log(arrowIcon)
+  console.log(arrowIcon[0]);
 
   if(target === games_footer.id) {
     const children = document.getElementById('games_footer').nextElementSibling;
     children.classList.toggle('openFooterNav')
     
     if(children.classList.contains('openFooterNav')) {
-      arrowIcon[0].classList.toggle('arrowIcon__open');
-    } else {
-      arrowIcon[0].classList.toggle('arrowIcon__open');
+      arrowIcon[0].classList.add('arrowIcon__open');
     }
   } else if (target === explore.id) {
     const children = document.getElementById('explore__more').nextElementSibling;
     children.classList.toggle('openFooterNav')
 
     if(children.classList.contains('openFooterNav')) {
-      arrowIcon[1].classList.toggle('arrowIcon__open');
-    } else {
       arrowIcon[1].classList.toggle('arrowIcon__open');
     }
   } else if (target === support.id) {
@@ -163,8 +159,6 @@ mobileFooterWrap.addEventListener('click', (e) => {
     
     if(children.classList.contains('openFooterNav')) {
       arrowIcon[2].classList.toggle('arrowIcon__open');
-    } else {
-      arrowIcon[2].classList.toggle('arrowIcon__open');
     }
   } else if (target === buy.id) {
     const children = document.getElementById('where__buy').nextElementSibling;
@@ -172,20 +166,47 @@ mobileFooterWrap.addEventListener('click', (e) => {
 
     if(children.classList.contains('openFooterNav')) {
       arrowIcon[3].classList.toggle('arrowIcon__open');
-    } else {
-      arrowIcon[3].classList.toggle('arrowIcon__open');
-    }  
+    }
   } else if (target === precaution.id) {
     const children = document.getElementById('health_safety_precaution').nextElementSibling;
     children.classList.toggle('openFooterNav')
 
     if(children.classList.contains('openFooterNav')) {
       arrowIcon[4].classList.toggle('arrowIcon__open');
-    } else {
-      arrowIcon[4].classList.toggle('arrowIcon__open');
     }
   }
 
 })
+
+// bottomNav Function
+const arrowIcon = document.querySelectorAll('.arrowIcon');
+function openGame() {
+  const games_navBottom = document.querySelector('.gamesNav_bottom')
+  games_navBottom.classList.add('gamesNav_bottom_open');
+  if(games_navBottom.classList.contains('gamesNav_bottom_open')) {
+    arrowIcon[0].classList.add('arrowIcon__open');
+  }
+}
+function openHardware() {
+  const hardware_navBottom = document.querySelector('.hardwareNav_bottom')
+  hardware_navBottom.classList.add('hardwareNav_bottom_open');
+  if(hardware_navBottom.classList.contains('hardwareNav_bottom_open')) {
+    arrowIcon[1].classList.add('arrowIcon__open');
+  }
+}
+
+function closeNavGame(){
+  const games_navBottom = document.querySelector('.gamesNav_bottom')
+  games_navBottom.classList.remove('gamesNav_bottom_open');
+  arrowIcon[0].classList.remove('arrowIcon__open');
+}
+
+function closeNavHardware() {
+  const hardware_navBottom = document.querySelector('.hardwareNav_bottom')
+  hardware_navBottom.classList.remove('hardwareNav_bottom_open');
+  arrowIcon[1].classList.remove('arrowIcon__open');
+}
+
+
 
 

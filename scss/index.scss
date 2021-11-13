@@ -24,9 +24,18 @@ header {
     align-items: center;
     justify-content: space-between;
 
+    div {
+        height: 100%;
+    }
+
     img {
         width : 90px;
         height : 50px;
+
+        @include mQ($medium) {
+            width : 130px;
+            height : 60px;
+        }
     }
 
     ul {
@@ -353,14 +362,97 @@ aside.isOpen {
             gap : 1em;
             padding : 20px;
         }
+
+        li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap : .3em;
+            font-family: $headerFont;
+            font-size: 1em;
+            color: $darkBrown;
+            cursor: pointer;
+
+            &:hover {
+                color : $red;
+            }
+        }
     }
 }
 
-.gamesNav {
+.gamesNav_bottom {
     display: none;
 }
-.hardwareNav {
+.hardwareNav_bottom {
     display: none;
+}
+
+.hardwareNav_bottom_open,
+.gamesNav_bottom_open {
+    background-color: white;
+    position: absolute;
+    top : 7.7em;
+    width : 100vw;
+    display: flex;
+    z-index: 2;
+    justify-content: center;
+    align-items: flex-start;
+    border-top : 1px solid $darkBrown;
+    opacity: 0.9;
+
+    ul,
+    li,
+    a {
+        display: flex;
+    }
+
+    a {
+        flex-direction: column;
+        align-items: center;
+        gap : .3em;
+    }
+
+    ion-icon {
+        font-size: 2em;
+    }
+    
+    button {
+        padding : 10px;
+        width : 110px;
+        height: 70px;
+        background-color: white;
+        border-radius: 10px;
+        border: 1px solid $darkBrown;
+
+        &:hover {
+            background-color: $red;
+            border: none;
+
+            ion-icon {
+                color : white;
+            }
+
+            a {
+                color : $red;
+            }
+        }
+    }
+}
+
+.hardwareNav_bottom_open {
+    #switch {
+        width : 200px;
+        height : 50px;
+    }
+
+    .switch {
+        width : 300px;
+    }
+
+    img {
+        height : 50px;
+        width: 50px;
+    }
 }
 
 
@@ -368,6 +460,7 @@ aside.isOpen {
 // main section
 .heroContainer {
     width : 100%;
+    position: relative;
 
     img {
         width: 100%;
@@ -381,7 +474,7 @@ aside.isOpen {
         @include mQ($medium) {
             display : block;
             position: absolute;
-            bottom : 14.5em;
+            bottom : 2em;
             right : 2em;
         }
     }
@@ -925,14 +1018,6 @@ footer {
                 text-decoration: underline;
             }
         }
-    }
-
-    .arrowIcon {
-        transition: .3s ease-in-out;
-    }
-
-    .arrowIcon__open {
-        transform: rotate(180deg);
     }
 
     @keyframes appear {

@@ -105,33 +105,33 @@
         <div class="bottomNav">
             <nav>
                 <ul>
-                    <li id="games"><span><ion-icon name="game-controller"></ion-icon></span> Games <span><ion-icon name="chevron-down"></ion-icon></span></li>
-                    <li id="hardware"><span><ion-icon name="calculator"></ion-icon></span> Hardware <span><ion-icon name="chevron-down"></ion-icon></span></li>
-                    <li><span><ion-icon name="newspaper"></ion-icon></span> News and Events <span><ion-icon name="chevron-down"></ion-icon></span></li>
-                    <li><span><ion-icon name="star"></ion-icon></span> Play Nintendo <span><ion-icon name="chevron-down"></ion-icon></span></li>
-                    <li><span><ion-icon name="snow"></ion-icon></span> Holiday Gift Guide <span><ion-icon name="chevron-down"></ion-icon></span></li>
+                    <li id="games" onclick="openGame()"><span><ion-icon name="game-controller"></ion-icon></span> Games <span><ion-icon class="arrowIcon" name="chevron-down"></ion-icon></span></li>
+                    <li id="hardware" onclick="openHardware()"><span><ion-icon name="calculator"></ion-icon></span> Hardware <span><ion-icon class="arrowIcon" name="chevron-down"></ion-icon></span></li>
+                    <li><span><ion-icon name="newspaper"></ion-icon></span> News and Events <span></li>
+                    <li><span><ion-icon name="star"></ion-icon></span> Play Nintendo </li>
+                    <li><span><ion-icon name="snow"></ion-icon></span> Holiday Gift Guide </li>
                 </ul>
             </nav>
             <!-- accessible only when clicked -->
-            <div class="gamesNav">
+            <div class="gamesNav_bottom">
                 <ul>
-                    <li><a href="#"><button>Shop Games <span><ion-icon name="chevron-down-outline"></ion-icon></span></button></a></li>
-                    <li><a href="#"><button>Sales and deals <span><ion-icon name="chevron-down-outline"></ion-icon></span></button></a></li>
-                    <li><a href="#"><button>Coming soon</button></a></li>
-                    <li><a href="#"><button>Online Service</button></a></li>
-                    <li><a href="#"><button>Mobile games</button></a></li>
+                    <li><a href="#"><button><ion-icon name="game-controller"></ion-icon></button>Shop Games</a></li>
+                    <li><a href="#"><button><ion-icon name="pricetag"></ion-icon></button>Sales and deals </a></li>
+                    <li><a href="#"><button><ion-icon name="calendar"></ion-icon></button>Coming soon</a></li>
+                    <li><a href="#"><button><ion-icon name="wifi"></ion-icon></button>Online Service</a></li>
+                    <li><a href="#"><button><ion-icon name="phone-portrait"></ion-icon></button>Mobile games</a></li>
                 </ul>
-                <ion-icon name="close-outline"></ion-icon>
+                <ion-icon onclick="closeNavGame()" name="close-outline"></ion-icon>
             </div>
-            <div class="hardwareNav">
+            <div class="hardwareNav_bottom">
                 <ul>
                     <ul>
-                        <li><a href="#"><button>Nintendo Switch Lineup</button></a></li>
-                        <li><a href="#"><button>Accessories</button></a></li>
-                        <li><a href="#"><button>amiibo</button></a></li>
+                        <li><a href="#"><button class="switch"><img id="switch" src="./asset/switch-lineup.png" alt="switch-lineup"></button>Nintendo Switch Lineup</a></li>
+                        <li><a href="#"><button><img src="./asset/accessories.png" alt="Accessories"></button>Accessories</a></li>
+                        <li><a href="#"><button><img src="./asset/amiibo.png" alt="amiibo"></button>amiibo</a></li>
                     </ul>
                 </ul>
-                <ion-icon name="close-outline"></ion-icon>
+                <ion-icon name="close-outline" onclick="closeNavHardware()"></ion-icon>
             </div>
         </div>
     </header>
