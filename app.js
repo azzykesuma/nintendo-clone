@@ -1,5 +1,19 @@
-// import Splide from '@splidejs/splide';
+// changing placeholder text;
+const mediaQuery = window.matchMedia('(min-width: 990px)');
+const search = document.getElementById('search');
 
+function handleQueryChanges(e) {
+  if(e.matches) {
+    search.placeholder = 'Search games, systems, support, etc';
+  } else {
+    search.placeholder = 'Search';
+  }
+}
+
+mediaQuery.addListener(handleQueryChanges);
+handleQueryChanges(mediaQuery);
+
+// slideshow function
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -89,8 +103,13 @@ function openlightBox() {
 
 function closeLightBox() {
   modalImage.classList.remove('modalImage__open');
-  sticky.style.display = 'grid';
+  if(mediaQuery.matches) {
+    sticky.style.display = 'none';
+  } else {
+    sticky.style.display = 'grid';
+  }
   heroData.style.backgroundColor = 'rgba(0,0,0,0)';
+
 }
 
 let modalIndex = 1;
@@ -182,17 +201,13 @@ mobileFooterWrap.addEventListener('click', (e) => {
 const arrowIcon = document.querySelectorAll('.arrowIcon');
 function openGame() {
   const games_navBottom = document.querySelector('.gamesNav_bottom')
-  games_navBottom.classList.add('gamesNav_bottom_open');
-  if(games_navBottom.classList.contains('gamesNav_bottom_open')) {
-    arrowIcon[0].classList.add('arrowIcon__open');
-  }
+  games_navBottom.classList.toggle('gamesNav_bottom_open');
+  arrowIcon[0].classList.toggle('arrowIcon__open');
 }
 function openHardware() {
   const hardware_navBottom = document.querySelector('.hardwareNav_bottom')
-  hardware_navBottom.classList.add('hardwareNav_bottom_open');
-  if(hardware_navBottom.classList.contains('hardwareNav_bottom_open')) {
-    arrowIcon[1].classList.add('arrowIcon__open');
-  }
+  hardware_navBottom.classList.toggle('hardwareNav_bottom_open');
+  arrowIcon[1].classList.toggle('arrowIcon__open');
 }
 
 function closeNavGame(){

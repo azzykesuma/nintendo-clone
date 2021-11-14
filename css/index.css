@@ -54,6 +54,24 @@ a {
   color: black;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2885F3;
+  border-radius: 10px;
+  height: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #1F6BC6;
+}
+
 .slideshow-container {
   max-width: 1000px;
   position: relative;
@@ -223,8 +241,10 @@ a {
 }
 
 .arrowIcon {
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
 
 .arrowIcon__open {
@@ -257,6 +277,16 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+.topNav .leftNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1.5em;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60%;
 }
 .topNav div {
   height: 100%;
@@ -305,12 +335,12 @@ header {
 .topNav form {
   display: none;
   position: relative;
-  width: 250px;
+  width: 70%;
 }
 .topNav form input {
   border: none;
   padding-left: 20px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
   width: 100%;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -325,26 +355,36 @@ header {
   color: #434242;
   font-size: 1.3em;
   font-family: "Open Sans";
+  font-weight: bold;
 }
 .topNav form input::-moz-placeholder {
   color: #434242;
   font-size: 1.3em;
   font-family: "Open Sans";
+  font-weight: bold;
 }
 .topNav form input:-ms-input-placeholder {
   color: #434242;
   font-size: 1.3em;
   font-family: "Open Sans";
+  font-weight: bold;
 }
 .topNav form input::-ms-input-placeholder {
   color: #434242;
   font-size: 1.3em;
   font-family: "Open Sans";
+  font-weight: bold;
 }
 .topNav form input::placeholder {
   color: #434242;
   font-size: 1.3em;
   font-family: "Open Sans";
+  font-weight: bold;
+}
+@media screen and (min-width: 47.8125em) {
+  .topNav form input {
+    border-bottom: 1px solid #e60012;
+  }
 }
 .topNav form ion-icon {
   position: absolute;
@@ -722,12 +762,28 @@ aside.isOpen {
 
 .gamesNav_bottom {
   display: none;
+  -webkit-animation: scrollDown 0.3s ease-in-out;
+          animation: scrollDown 0.3s ease-in-out;
 }
 
 .hardwareNav_bottom {
   display: none;
+  -webkit-animation: scrollDown 0.3s ease-in-out;
+          animation: scrollDown 0.3s ease-in-out;
 }
 
+@keyframes scrollDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(1000px);
+            transform: translateX(1000px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
 .hardwareNav_bottom_open,
 .gamesNav_bottom_open {
   background-color: white;
@@ -829,14 +885,95 @@ aside.isOpen {
 }
 @media screen and (min-width: 47.8125em) {
   .heroContainer {
-    padding: 20px;
+    padding: 20px 3em;
     width: auto;
     background-color: #d6f0fa;
+  }
+}
+@media screen and (min-width: 64.375em) {
+  .heroContainer {
+    padding-inline: 10em;
   }
 }
 
 .heroData {
   padding: 20px;
+}
+.heroData .gridWrapTop {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 47.8125em) {
+  .heroData .gridWrapTop .grid_item:nth-child(2) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+.heroData .gridWrapTop .grid_item:nth-child(3) {
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
+}
+@media screen and (min-width: 47.8125em) {
+  .heroData .gridWrapTop .grid_item:nth-child(4) {
+    text-align: right;
+  }
+}
+@media screen and (min-width: 47.8125em) {
+  .heroData .gridWrapTop .grid_item:nth-child(5) {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+    width: 50%;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 47.8125em) {
+  .heroData .gridWrapTop .grid_item:nth-child(6) {
+    -webkit-box-ordinal-group: 7;
+        -ms-flex-order: 6;
+            order: 6;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 47.8125em) {
+  .heroData .gridWrapTop {
+    -ms-grid-columns: 1fr 1em 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 50px 1em 50px 1em 50px;
+    grid-template-rows: repeat(3, 50px);
+    gap: 1em;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .heroData .gridWrapTop > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .heroData .gridWrapTop > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .heroData .gridWrapTop > *:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .heroData .gridWrapTop > *:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+  .heroData .gridWrapTop > *:nth-child(5) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+  }
+  .heroData .gridWrapTop > *:nth-child(6) {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+  }
 }
 .heroData .console {
   border-bottom: 2px solid #e60012;
@@ -879,11 +1016,11 @@ aside.isOpen {
 .heroData div .coinEligible:hover {
   text-decoration: underline;
 }
-.heroData div ion-icon {
-  font-size: 1.7em;
+.heroData div button ion-icon {
+  color: white;
 }
 .heroData div ion-icon, .heroData div a {
-  color: #e60012;
+  color: red;
   cursor: pointer;
 }
 .heroData div a {
@@ -943,6 +1080,20 @@ aside.isOpen {
 .modalImage .slides-images img {
   width: 100%;
 }
+@media screen and (min-width: 64.375em) {
+  .modalImage .slides-images img {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (min-width: 64.375em) {
+  .modalImage .slides-images {
+    padding: 2em;
+    top: 0;
+    left: 15em;
+  }
+}
 
 .modalImage__open {
   display: -webkit-box;
@@ -960,6 +1111,13 @@ aside.isOpen {
   width: 100%;
   background-color: #d6f0fa;
   margin-bottom: 4em;
+}
+.hero__images .slideshow-container {
+  max-width: 100vw;
+}
+.hero__images .slideshow-container .prev:hover,
+.hero__images .slideshow-container .next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .hero__images img {
   width: 100%;
@@ -1004,11 +1162,55 @@ aside.isOpen {
   -ms-grid-row: 5;
   -ms-grid-column: 3;
 }
+@media screen and (min-width: 47.8125em) {
+  .hero__images .gridWrap {
+    -ms-grid-columns: 50% 25% 25%;
+    grid-template-columns: 50% 25% 25%;
+    -ms-grid-rows: auto auto;
+    grid-template-rows: auto auto;
+  }
+  .hero__images .gridWrap > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .hero__images .gridWrap > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .hero__images .gridWrap > *:nth-child(3) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .hero__images .gridWrap > *:nth-child(4) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+  .hero__images .gridWrap > *:nth-child(5) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .hero__images .gridWrap > *:nth-child(6) {
+    -ms-grid-row: 2;
+    -ms-grid-column: 3;
+  }
+}
 .hero__images .firstImage {
   -ms-grid-column: 1;
       grid-column-start: 1;
   -ms-grid-column-span: -2;
   grid-column-end: -1;
+}
+@media screen and (min-width: 47.8125em) {
+  .hero__images .firstImage {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-column-span: 1;
+    grid-column-end: 2;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    -ms-grid-row-span: -2;
+    grid-row-end: -1;
+  }
 }
 
 .heroDescription {
@@ -1029,6 +1231,14 @@ aside.isOpen {
 .gameDetail {
   padding: 20px;
 }
+@media screen and (min-width: 47.8125em) {
+  .gameDetail .detailWrap {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1em;
+  }
+}
 .gameDetail .flex__wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1037,6 +1247,14 @@ aside.isOpen {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+@media screen and (min-width: 47.8125em) {
+  .gameDetail .flex__wrap {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
 }
 .gameDetail .flex__item {
   display: -webkit-box;
@@ -1227,12 +1445,59 @@ aside.isOpen {
 .gameDetail .support {
   padding: 20px;
 }
+.gameDetail .support .supportWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 47.8125em) {
+  .gameDetail .support .supportWrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 1em;
+  }
+}
+@media screen and (min-width: 64.375em) {
+  .gameDetail .support .supportWrap {
+    gap: 2em;
+  }
+}
 .gameDetail .support img {
   width: 200px;
   height: 100px;
 }
+@media screen and (min-width: 47.8125em) {
+  .gameDetail .support img {
+    height: auto;
+    width: 100px;
+  }
+}
+@media screen and (min-width: 64.375em) {
+  .gameDetail .support img {
+    width: 250px;
+  }
+}
 .gameDetail .support p {
   margin-left: 0;
+}
+@media screen and (min-width: 47.8125em) {
+  .gameDetail .support p {
+    max-width: 20ch;
+  }
+}
+@media screen and (min-width: 64.375em) {
+  .gameDetail .support p {
+    max-width: 40ch;
+  }
 }
 .gameDetail .support a {
   display: -webkit-box;
@@ -1250,6 +1515,13 @@ aside.isOpen {
 .gameDetail .support a:hover {
   text-decoration: underline;
 }
+@media screen and (min-width: 47.8125em) {
+  .gameDetail .support a {
+    margin-top: 0;
+    margin-left: 1em;
+    font-size: 1.5em;
+  }
+}
 .gameDetail .support h2 {
   margin-top: 2em;
   margin-left: 0;
@@ -1259,21 +1531,18 @@ aside.isOpen {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 1em;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
-@media screen and (min-width: 21.875em) {
+@media screen and (min-width: 47.8125em) {
   .gameDetail .support .buttonWrap {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -1320,9 +1589,20 @@ aside.isOpen {
     height: 100px;
   }
 }
+@media screen and (min-width: 47.8125em) {
+  .slideshow-bottom-container .slideShowItem img {
+    width: 100%;
+    height: 100%;
+  }
+}
 .slideshow-bottom-container .slideShowItem h2 {
   margin-bottom: 0.7em;
   font-size: 1.1em;
+}
+@media screen and (min-width: 47.8125em) {
+  .slideshow-bottom-container .slideShowItem h2 {
+    font-size: 1.5em;
+  }
 }
 .slideshow-bottom-container .slideShowItem li {
   width: 200px;
@@ -1334,6 +1614,11 @@ aside.isOpen {
 .recent-view-wrap h2 {
   font-size: 1.7em;
   margin-bottom: 2em;
+}
+@media screen and (min-width: 64.375em) {
+  .recent-view-wrap h2 {
+    margin-top: 3em;
+  }
 }
 .recent-view-wrap .recentView {
   display: -webkit-box;
@@ -1354,8 +1639,14 @@ aside.isOpen {
 }
 .recent-view-wrap .recentView h2 {
   margin-bottom: 0.7em;
+  margin-top: 0;
 }
 
+@media screen and (min-width: 47.8125em) {
+  footer .mobileFooterWrap {
+    display: none;
+  }
+}
 footer .footerNavItem {
   cursor: pointer;
 }
@@ -1445,11 +1736,67 @@ footer .openFooterNav a:hover {
     opacity: 1;
   }
 }
-footer .tabletFooterWrap {
-  display: none;
-}
 footer .desktopFooter {
   display: none;
+}
+footer .desktopFooter .footerHeader {
+  color: #434242;
+  font-weight: 900;
+  font-family: "Bree Serif";
+  margin-bottom: 1em;
+}
+footer .desktopFooter li {
+  margin-bottom: 1em;
+}
+footer .desktopFooter a {
+  color: #434242;
+  font-size: 0.9em;
+  font-weight: 400;
+}
+footer .desktopFooter .footerDesktopItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+footer .desktopFooter .desktopFooterWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  gap: 1em;
+}
+footer .desktopFooter .region {
+  font-size: 1.1em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+@media screen and (min-width: 47.8125em) {
+  footer .desktopFooter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+    background-color: #efefef;
+  }
 }
 footer .bottomPart {
   background-color: #07403B;
@@ -1488,6 +1835,21 @@ footer .bottomPart .footerGridWrap {
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (min-width: 47.8125em) {
+  footer .bottomPart .footerGridWrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 0.7em;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 footer .bottomPart img {
   width: 50px;
   height: 80px;
@@ -1498,6 +1860,11 @@ footer .bottomPart img {
   footer .bottomPart img {
     width: 70px;
     height: 100px;
+  }
+}
+@media screen and (min-width: 47.8125em) {
+  footer .bottomPart img {
+    margin-top: 0;
   }
 }
 footer .bottomPart .socialMediaWrap {
@@ -1598,4 +1965,9 @@ footer .bottomPart p {
 .sticky .search ion-icon {
   color: #ffffff;
   font-size: 3em;
+}
+@media screen and (min-width: 47.8125em) {
+  .sticky {
+    display: none;
+  }
 }

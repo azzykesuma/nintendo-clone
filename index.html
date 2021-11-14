@@ -20,18 +20,18 @@
 <body>
     <header>
         <div class="topNav">
-            <div>
+            <div class="leftNav">
                 <img src="./asset/logo.png" alt="" />
+                <form action="">
+                    <label for="search"></label>
+                    <input type="text" 
+                    name='search' 
+                    id="search"
+                    placeholder="Search"
+                    />
+                    <ion-icon name="search"></ion-icon>
+                </form>
             </div>
-            <form action="">
-                <label for="search"></label>
-                <input type="text" 
-                name='search' 
-                id="search"
-                placeholder="Search"
-                />
-                <ion-icon name="search"></ion-icon>
-            </form>
             <ul>
                 <li><a href="#"><span><ion-icon name="help-circle-outline"></ion-icon></span> support</a></li>
                 <li><a href="#"><span><ion-icon name="heart"></ion-icon></span> Wish List</a></li>
@@ -143,17 +143,19 @@
             </div>
             <div class="heroData">
                 <p class="console">Nintendo Switch</p>
-                <h1>Stardew Valley</h2>
-                <p>Avaliable Now</p>
-                <h2>$14.99</h2>
-                <button class="primary">Buy Digital <span><ion-icon name="chevron-forward-outline"></ion-icon></span></button>
-                <div>
-                    <img src="./asset/gold-points.png" alt="">
-                    <a class="coinEligible">Eligible for up to 75 points</a>
-                </div>
-                <div>
-                    <ion-icon name="heart-outline"></ion-icon>
-                    <a href="#">Add to Wish List</a>
+                <div class="gridWrapTop">                
+                        <h1 class="grid_item">Stardew Valley</h2>
+                        <p class="grid_item">Avaliable Now</p>
+                        <div class="grid_item">
+                            <ion-icon name="heart-outline"></ion-icon>
+                            <a href="#">Add to Wish List</a>
+                        </div>
+                        <h2 class="grid_item">$14.99</h2>
+                        <button class="primary grid_item ">Buy Digital <span><ion-icon name="chevron-forward-outline"></ion-icon></span></button>
+                        <div class="grid_item">
+                            <img src="./asset/gold-points.png" alt="">
+                            <a class="coinEligible">Eligible for up to 75 points</a>
+                        </div>
                 </div>
             </div>
             <div id="lightbox" class="modalImage">
@@ -233,107 +235,113 @@
                 <button class="primary btn_explore">Explore this game's official site</button>
             </div>
             <div class="gameDetail">
-                <div class="flex__wrap">
-                    <div style='background-color:#efefef' class="flex__item">
-                        <ion-icon name="calendar-outline"></ion-icon>
-                        <div>
-                            <h2>Release Date:</h2>
-                            <p>October 05, 2017</p>
-                        </div>
-                    </div>
-                    <div class="flex__item">
-                        <ion-icon name="people"></ion-icon>
-                        <div>
-                            <h2>Players: </h2>
-                            <p>up to 4 players</p>
-                        </div>
-                    </div>
-                    <div class="flex__item" style='background-color:#efefef'>
-                        <ion-icon name="game-controller"></ion-icon>
-                        <div>
-                            <h2>Genre: </h2>
-                            <p>Indie, Simulation, Role-Playing</p>
-                        </div>
-                    </div>
-                    <div class="flex__item">
-                        <ion-icon name="business"></ion-icon>
-                        <div>
-                            <h2>Publisher: </h2>
-                            <p>ConcernedApe</p>
-                        </div>
-                    </div>
-                    <div class="flex__item game_support" style='background-color:#efefef'>
-                        <h2>Supported Play Modes :</h2>
-                        <div class="modeWrap">
+                <div class="detailWrap">
+                    <div class="flex__wrap">
+                        <div style='background-color:#efefef' class="flex__item">
+                            <ion-icon name="calendar-outline"></ion-icon>
                             <div>
-                                <img src="./asset/tv.svg" alt="">
-                                <p>TV mode</p>
-                            </div>
-                            <div>
-                                <img src="./asset/tabletop.svg" alt="">
-                                <p>Tabletop Mode</p>
-                            </div>
-                            <div>
-                                <img src="./asset/handheld.svg" alt="">
-                                <p>Handheld Mode</p>
+                                <h2>Release Date:</h2>
+                                <p>October 05, 2017</p>
                             </div>
                         </div>
-                        <p class="notice">
-                            Software compatibility and play experience may differ on Nintendo Switch Lite. 
-                            Additional accessories may be required (sold separately). See <a href="#">support</a> for details.
-                        </p>
-                    </div>
-                </div>
-                <div class="flex__wrap">
-                    <div  class="flex__item"style='background-color:#efefef'>
-                        <ion-icon name="cog"></ion-icon>
-                        <div>
-                            <h2>Developer: </h2>
-                            <p>ConcernedApe</p>
-                        </div>
-                    </div>
-                    <div class="flex__item">
-                        <ion-icon name="folder"></ion-icon>
-                        <div>
-                            <h2>Game file size: </h2>
-                            <p>1.5 GB</p>
-                        </div>
-                    </div>
-                    <div class="flex__item language">
-                        <ion-icon name="globe-outline"></ion-icon>
-                        <dl>
-                            <dt>Supported Languages: </dt>
-                            <dd>
-                                Japanese, French, German, Italian, Spanish, Korean, Portuguese, Russian, Chinese, English
-                            </dd>
-                        </dl>
-                    </div>
-                    <div class="flex__item rating" style='background-color:#efefef'>
-                        <h2>ESRB Rating :</h2>
-                        <div class="innerWrap">
-                            <img src="./asset/en-e10.svg" alt="" />
+                        <div class="flex__item">
+                            <ion-icon name="people"></ion-icon>
                             <div>
-                                <p style="border-bottom: 2px solid #434242;">
-                                    Simulated gambling, use of alcohol, fantasy violence,
-                                    use of tobacco, mild blood, mild language
-                                </p>
-                                <hr />
-                                <p>User interact</p>
+                                <h2>Players: </h2>
+                                <p>up to 4 players</p>
+                            </div>
+                        </div>
+                        <div class="flex__item" style='background-color:#efefef'>
+                            <ion-icon name="game-controller"></ion-icon>
+                            <div>
+                                <h2>Genre: </h2>
+                                <p>Indie, Simulation, Role-Playing</p>
+                            </div>
+                        </div>
+                        <div class="flex__item">
+                            <ion-icon name="business"></ion-icon>
+                            <div>
+                                <h2>Publisher: </h2>
+                                <p>ConcernedApe</p>
+                            </div>
+                        </div>
+                        <div class="flex__item game_support" style='background-color:#efefef'>
+                            <h2>Supported Play Modes :</h2>
+                            <div class="modeWrap">
+                                <div>
+                                    <img src="./asset/tv.svg" alt="">
+                                    <p>TV mode</p>
+                                </div>
+                                <div>
+                                    <img src="./asset/tabletop.svg" alt="">
+                                    <p>Tabletop Mode</p>
+                                </div>
+                                <div>
+                                    <img src="./asset/handheld.svg" alt="">
+                                    <p>Handheld Mode</p>
+                                </div>
+                            </div>
+                            <p class="notice">
+                                Software compatibility and play experience may differ on Nintendo Switch Lite. 
+                                Additional accessories may be required (sold separately). See <a href="#">support</a> for details.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flex__wrap">
+                        <div  class="flex__item"style='background-color:#efefef'>
+                            <ion-icon name="cog"></ion-icon>
+                            <div>
+                                <h2>Developer: </h2>
+                                <p>ConcernedApe</p>
+                            </div>
+                        </div>
+                        <div class="flex__item">
+                            <ion-icon name="folder"></ion-icon>
+                            <div>
+                                <h2>Game file size: </h2>
+                                <p>1.5 GB</p>
+                            </div>
+                        </div>
+                        <div class="flex__item language">
+                            <ion-icon name="globe-outline"></ion-icon>
+                            <dl>
+                                <dt>Supported Languages: </dt>
+                                <dd>
+                                    Japanese, French, German, Italian, Spanish, Korean, Portuguese, Russian, Chinese, English
+                                </dd>
+                            </dl>
+                        </div>
+                        <div class="flex__item rating" style='background-color:#efefef'>
+                            <h2>ESRB Rating :</h2>
+                            <div class="innerWrap">
+                                <img src="./asset/en-e10.svg" alt="" />
+                                <div>
+                                    <p style="border-bottom: 2px solid #434242;">
+                                        Simulated gambling, use of alcohol, fantasy violence,
+                                        use of tobacco, mild blood, mild language
+                                    </p>
+                                    <hr />
+                                    <p>User interact</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="support" style="background-color: #efefef;">
-                    <img src="./asset/logo-nso.svg" alt="">
-                    <p>
-                        Play online, access classic Super NES™ games, 
-                        and more with a Nintendo Switch Online membership.
-                    </p>
-                    <a href="#">Learn More <span><ion-icon name="chevron-forward-outline"></ion-icon></span></a>
-                    <h2>This game supports</h2>
-                    <div class="buttonWrap">
-                        <button class="primary" style="width: 200px;">Online Play</button>
-                        <button class="primary" style="width: 200px;">Save Data Cloud</button>
+                    <div class="supportWrap">
+                        <img src="./asset/logo-nso.svg" alt="">
+                        <p>
+                            Play online, access classic Super NES™ games, 
+                            and more with a Nintendo Switch Online membership.
+                        </p>
+                        <a href="#">Learn More <span><ion-icon name="chevron-forward-outline"></ion-icon></span></a>
+                    </div>
+                    <div class="supportWrap">
+                        <h2>This game supports</h2>
+                        <div class="buttonWrap">
+                            <button class="primary" style="width: 200px;">Online Play</button>
+                            <button class="primary" style="width: 200px;">Save Data Cloud</button>
+                        </div>
                     </div>
                 </div>
                 <div class="terms">
@@ -536,77 +544,71 @@
                     </li>
                 </ul>
             </div>
-            <!-- tablet footer -->
-            <div class="tabletFooterWrap">
-                <ul>
-                    <li><a href="#">Games</a></li>
-                    <li><a href="#">Explore more</a></li>
-                    <li><a href="#">Support</a></li>
-                    <li><a href="#">Where to buy</a></li>
-                    <li><a href="#">Health and Safety</a></li>
-                    <li><a href="#">Change Region</a><span class="flag-icon flag-icon-us"></span></li>
-                </ul>
-            </div>
             <!-- desktop footer -->
             <div class="desktopFooter">
-                <div class="footerDesktopItem">
-                    <ul>
-                        <li><a href="#">Coming Soon</a></li>
-                        <li><a href="#">Nintendo Switch</a></li>
-                        <li><a href="#">Wii U</a></li>
-                        <li><a href="#">Nintendo 3ds</a></li>
-                    </ul>
+                <div class="desktopFooterWrap">
+                    <div class="footerDesktopItem">
+                        <ul>
+                            <li><a href="#" class="footerHeader">Coming Soon</a></li>
+                            <li><a href="#">Nintendo Switch</a></li>
+                            <li><a href="#">Wii U</a></li>
+                            <li><a href="#">Nintendo 3ds</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerDesktopItem">
+                        <ul>
+                            <li><a href="#" class="footerHeader">Explore More</a></li>
+                            <li><a href="#">Game Guide</a></li>
+                            <li><a href="#">All Mario Game</a></li>
+                            <li><a href="#">Games for any age</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerDesktopItem">
+                        <ul>
+                            <li><a href="#" class="footerHeader">Support</a></li>
+                            <li><a href="#">Warranty</a></li>
+                            <li><a href="#">Nintendo Switch Support</a></li>
+                            <li><a href="#">Wii U support</a></li>
+                            <li><a href="#">Nintendo 3ds support</a></li>
+                            <li><a href="#">Repair Help</a></li>
+                            <li><a href="#">Nintendo product recycling</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerDesktopItem">
+                        <ul>
+                            <li><a href="#" class="footerHeader">Where to buy</a></li>
+                            <li><a href="#">Game store</a></li>
+                            <li><a href="#">List of online retailers</a></li>
+                            <li><a href="#">Nintento NY</a></li>
+                            <li><a href="#">Nintendo Store</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerDesktopItem">
+                        <ul>
+                            <li><a href="#" class="footerHeader">Health and safety/privacy</a></li>
+                            <li><a href="#">Health and safety precautions manual</a></li>
+                            <li><a href="#">Cookies and interest-based ads</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Terms of Use</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footerDesktopItem">
-                    <ul>
-                        <li><a href="#">Explore More</a></li>
-                        <li><a href="#">Game Guide</a></li>
-                        <li><a href="#">All Mario Game</a></li>
-                        <li><a href="#">Games for any age</a></li>
-                    </ul>
-                </div>
-                <div class="footerDesktopItem">
-                    <ul>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Warranty</a></li>
-                        <li><a href="#">Nintendo Switch Support</a></li>
-                        <li><a href="#">Wii U support</a></li>
-                        <li><a href="#">Nintendo 3ds support</a></li>
-                        <li><a href="#">Repair Help</a></li>
-                        <li><a href="#">Nintendo product recycling</a></li>
-                    </ul>
-                </div>
-                <div class="footerDesktopItem">
-                    <ul>
-                        <li><a href="#">Where to buy</a></li>
-                        <li><a href="#">Game store</a></li>
-                        <li><a href="#">List of online retailers</a></li>
-                        <li><a href="#">Nintento NY</a></li>
-                        <li><a href="#">Nintendo Store</a></li>
-                    </ul>
-                </div>
-                <div class="footerDesktopItem">
-                    <ul>
-                        <li><a href="#">Health and safety/privacy</a></li>
-                        <li><a href="#">Health and safety precautions manual</a></li>
-                        <li><a href="#">Cookies and interest-based ads</a></li>
-                        <li><a href="#">Privacy policy</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                    </ul>
-                </div>
+                <a href="#" class="region">change region <span class="flag-icon flag-icon-us"></span></a>
             </div>
             <!-- footer bottom part -->
             <div class="bottomPart">
                 <div class="footerGridWrap">
-                    <div class="linkWrap">
-                        <a>Website Feedback</a>
-                        <a>Contact Us</a>
-                    </div>
-                    <div class="socialMediaWrap">
-                        <div class="facebook"><ion-icon name="logo-facebook"></ion-icon></div>
-                        <div class="instagram"><ion-icon name="logo-instagram"></ion-icon></div>
-                        <div class="twitter"><ion-icon name="logo-twitter"></ion-icon></div>
-                        <div class="youtube"><ion-icon name="logo-youtube"></ion-icon></div>
+                    <div>
+                        <div class="linkWrap">
+                            <a>Website Feedback</a>
+                            <a>Contact Us</a>
+                        </div>
+                        <div class="socialMediaWrap">
+                            <div class="facebook"><ion-icon name="logo-facebook"></ion-icon></div>
+                            <div class="instagram"><ion-icon name="logo-instagram"></ion-icon></div>
+                            <div class="twitter"><ion-icon name="logo-twitter"></ion-icon></div>
+                            <div class="youtube"><ion-icon name="logo-youtube"></ion-icon></div>
+                        </div>
                     </div>
                     <img src="./asset/ESRB-certified.svg" alt="">
                 </div>
